@@ -8,10 +8,10 @@ public class Check08 {
 		 */
 		int n = 20;
 		if (n % 2 == 0) {
-			System.out.println("Â¦¼ö");
+			System.out.println("ì§ìˆ˜");
 		}
 		else {
-			System.out.println("È¦¼ö");
+			System.out.println("í™€ìˆ˜");
 		}
 		
 		/*
@@ -21,8 +21,8 @@ public class Check08 {
 		double max = x > y ? x : y;
 		double min = x < y ? x : y;
 		
-		System.out.printf("ÃÖ´ë: %f\n", max);
-		System.out.printf("ÃÖ¼Ò: %f\n", min);
+		System.out.printf("ìµœëŒ€: %f\n", max);
+		System.out.printf("ìµœì†Œ: %f\n", min);
 		
 		/*
 		 * 3.
@@ -30,10 +30,10 @@ public class Check08 {
 		int n1 = 5;
 		switch (n1 % 3) {
 			case 0:
-				System.out.printf("3ÀÇ ¹è¼öÀÔ´Ï´Ù.\n");
+				System.out.printf("3ì˜ ë°°ìˆ˜ìž…ë‹ˆë‹¤.\n");
 				break;
 			case 1: case 2:
-				System.out.printf("3ÀÇ ¹è¼ö°¡ ¾Æ´Õ´Ï´Ù.\n");
+				System.out.printf("3ì˜ ë°°ìˆ˜ê°€ ì•„ë‹™ë‹ˆë‹¤.\n");
 				break;
 		}
 		
@@ -43,17 +43,17 @@ public class Check08 {
 		/*int x = 20;
 		switch (x) {
 		case x > 0:
-			System.out.printf("¾ç¼ö\n");
+			System.out.printf("ì–‘ìˆ˜\n");
 			break;
 		case x < 0:
-			System.out.println("À½¼ö\n");
+			System.out.println("ìŒìˆ˜\n");
 		}*/
 		int x1 = 20;
 		if (x1 > 0) {
-			System.out.printf("¾ç¼ö\n");
+			System.out.printf("ì–‘ìˆ˜\n");
 		}
 		else if (x1 < 0) {
-			System.out.println("À½¼ö\n");
+			System.out.println("ìŒìˆ˜\n");
 		}
 	}
 }

@@ -8,9 +8,9 @@ public class ToPound {
 		
 		Scanner input = new Scanner(System.in);
 		double weight = input.nextDouble();
-		System.out.println("¹«°Ô: " + weight + "kg");
+		System.out.println("ë¬´ê²Œ: " + weight + "kg");
 		
 		double pound = weight * 2.2;
-		System.out.println("¹«°Ô: " + pound + "lb");
+		System.out.println("ë¬´ê²Œ: " + pound + "lb");
 	}
 }

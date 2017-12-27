@@ -3,15 +3,15 @@ package programming.basic;
 public class HelloChars {
 	
 	public static void main(String[] args) {
-		System.out.println('a');	// char Çü
-		System.out.println('\\');	// \ Ãâ·Â
+		System.out.println('a');	// char í˜•
+		System.out.println('\\');	// \ ì¶œë ¥
 		
-		// 8Áø¼ö 142ÀÇ ASCII ÄÚµå °ª(10Áø¼ö 98ÀÇ ASCII ÄÚµå°ª)
+		// 8ì§„ìˆ˜ 142ì˜ ASCII ì½”ë“œ ê°’(10ì§„ìˆ˜ 98ì˜ ASCII ì½”ë“œê°’)
 		System.out.println('\142');
 		
-		System.out.println('\uAC00');	// UTF-8(Unicode) °ª AC00 : °¡
-		System.out.println('\uAC01');	// UTF-8(Unicode) °ª AC01 : °¢
-		System.out.println('°­');
+		System.out.println('\uAC00');	// UTF-8(Unicode) ê°’ AC00 : ê°€
+		System.out.println('\uAC01');	// UTF-8(Unicode) ê°’ AC01 : ê°
+		System.out.println('ê°•');
 		
 		System.out.print("Hello\nWorld\tHi\b\rABC\r\n");
 		System.out.println("\'");

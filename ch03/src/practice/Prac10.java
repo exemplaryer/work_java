@@ -3,21 +3,21 @@ package practice;
 import java.util.Scanner;
 
 /*
- * ÁöºÒÇÒ ±İ¾×À» Á¤¼ö·Î ÀÔ·Â¹Ş¾Æ È­Æó´ÜÀ§°¡ °¢°¢ ¸î °³¾¿ ÇÊ¿äÇÑÁö
- * Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+ * ì§€ë¶ˆí•  ê¸ˆì•¡ì„ ì •ìˆ˜ë¡œ ì…ë ¥ë°›ì•„ í™”íë‹¨ìœ„ê°€ ê°ê° ëª‡ ê°œì”© í•„ìš”í•œì§€
+ * ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
  * 
- * - ÀÔ·ÂÀº ÃÖ¼Ò Ãµ ¿ø ´ÜÀ§·Î ÀÔ·Â
- * - È­Æó´ÜÀ§´Â 50000, 10000, 5000, 1000 4°¡ÁöÀÌ¸ç, °¡´ÉÇÑ Å« È­Æó´ÜÀ§·Î ÁöºÒ
+ * - ì…ë ¥ì€ ìµœì†Œ ì²œ ì› ë‹¨ìœ„ë¡œ ì…ë ¥
+ * - í™”íë‹¨ìœ„ëŠ” 50000, 10000, 5000, 1000 4ê°€ì§€ì´ë©°, ê°€ëŠ¥í•œ í° í™”íë‹¨ìœ„ë¡œ ì§€ë¶ˆ
  */
 public class Prac10 {
 	
 	public static void main(String[] args) {
 		
 		Scanner input = new Scanner(System.in);
-		System.out.println("±İ¾×À» ÀÔ·ÂÇÏ¼¼¿ä >> ");
+		System.out.println("ê¸ˆì•¡ì„ ì…ë ¥í•˜ì„¸ìš” >> ");
 		int money = input.nextInt();
 		
-		// ¹æ¹ı 1
+		// ë°©ë²• 1
 		/*int fiveMan = money / 50000;
 		System.out.println(fiveMan);
 		
@@ -36,12 +36,12 @@ public class Prac10 {
 		int chun = money / 1000;
 		System.out.println(chun);*/
 		
-		//¹æ¹ı 2
+		//ë°©ë²• 2
 		int fiveMan = money / 50000;
 		int man = money % 50000 / 10000;
 		int fiveChun = money % 10000 / 5000;
 		int chun = money % 5000 / 1000;
-		System.out.printf("5¸¸¿ø±Ç %d°³%n1¸¸¿ø±Ç %d°³%n5Ãµ¿ø±Ç %d°³%nÃµ¿ø±Ç %d°³%n",
+		System.out.printf("5ë§Œì›ê¶Œ %dê°œ%n1ë§Œì›ê¶Œ %dê°œ%n5ì²œì›ê¶Œ %dê°œ%nì²œì›ê¶Œ %dê°œ%n",
 				fiveMan, man, fiveChun, chun);
 	}
 }

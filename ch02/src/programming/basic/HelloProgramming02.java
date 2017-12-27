@@ -1,28 +1,28 @@
 package programming.basic;
 
-// 1ÁÙÂ¥¸® ÁÖ¼®
-// ¾È³çÇÏ¼¼¿ä ¹Ý°©½À´Ï´Ù
+// 1ì¤„ì§œë¦¬ ì£¼ì„
+// ì•ˆë…•í•˜ì„¸ìš” ë°˜ê°‘ìŠµë‹ˆë‹¤
 
-// ¿©·¯ÁÙ ÀÔ·ÂÇÏ´Â ÁÖ¼®
-/* µ¿ÇØ¹°°ú ¹éµÎ»êÀÌ
-  ¸¶¸£°í ´âµµ·Ï
-  ÇÏ´À´ÔÀÌ º¸¿ìÇÏ»ç
-  ¿ì¸®³ª¶ó ¸¸¼¼ */
+// ì—¬ëŸ¬ì¤„ ìž…ë ¥í•˜ëŠ” ì£¼ì„
+/* ë™í•´ë¬¼ê³¼ ë°±ë‘ì‚°ì´
+  ë§ˆë¥´ê³  ë‹³ë„ë¡
+  í•˜ëŠë‹˜ì´ ë³´ìš°í•˜ì‚¬
+  ìš°ë¦¬ë‚˜ë¼ ë§Œì„¸ */
 
-// JavaDoc ÁÖ¼®
+// JavaDoc ì£¼ì„
 /**
  * 
  * @author KOITT
  */
 
 /*
- *  ÁÖ¼® ´ÜÃàÅ° (ºí·° ÁöÁ¤ ÈÄ)
- *  ÁÖ¼® ¼³Á¤: Ctrl + Shift + /
- *  ÁÖ¼® ÇØÁ¦: Ctrl + Shift + \
+ *  ì£¼ì„ ë‹¨ì¶•í‚¤ (ë¸”ëŸ­ ì§€ì • í›„)
+ *  ì£¼ì„ ì„¤ì •: Ctrl + Shift + /
+ *  ì£¼ì„ í•´ì œ: Ctrl + Shift + \
  */
 public class HelloProgramming02 {
 	
-	static String hello = "¾È³çÇÏ¼¼¿ä. ¿©·¯ºÐ - ¹Ý°©½À´Ï´Ù.";
+	static String hello = "ì•ˆë…•í•˜ì„¸ìš”. ì—¬ëŸ¬ë¶„ - ë°˜ê°‘ìŠµë‹ˆë‹¤.";
 	static String hello02 = "Hello";
 	
 	public static void main(String[] args) {
@@ -46,14 +46,14 @@ public class HelloProgramming02 {
 		
 	}
 	
-	// °°Àº ³»¿ë 10¹ø Ãâ·ÂÇÏ´Â ¸Þ¼Òµå
+	// ê°™ì€ ë‚´ìš© 10ë²ˆ ì¶œë ¥í•˜ëŠ” ë©”ì†Œë“œ
 	static void print10(String word) {
 		for (int i = 0; i < 10; i++) {
 			System.out.println(hello);
 		}
 	}
 	
-	// µÎ ¼öÀÇ ÇÕÀ» Ãâ·ÂÇÏ´Â ¸Þ¼Òµå
+	// ë‘ ìˆ˜ì˜ í•©ì„ ì¶œë ¥í•˜ëŠ” ë©”ì†Œë“œ
 	static void printSum(int a, int b) {
 		int result = a + b;
 		System.out.println(hello);

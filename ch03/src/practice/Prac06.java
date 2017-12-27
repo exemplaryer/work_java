@@ -3,17 +3,17 @@ package practice;
 import java.util.Scanner;
 
 /*
- * Ãµ¸¸ ÀÌÇÏÀÇ Á¤¼ö ÇÏ³ª¸¦ ÀÔ·Â ¹Þ¾Æ ¿ì¸®°¡ »ç¿ëÇÏ´Â ´ÜÀ§ÀÎ ¸¸, Ãµ, ¹é, ½Ê, ÀÏ ´ÜÀ§·Î
- * Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+ * ì²œë§Œ ì´í•˜ì˜ ì •ìˆ˜ í•˜ë‚˜ë¥¼ ìž…ë ¥ ë°›ì•„ ìš°ë¦¬ê°€ ì‚¬ìš©í•˜ëŠ” ë‹¨ìœ„ì¸ ë§Œ, ì²œ, ë°±, ì‹­, ì¼ ë‹¨ìœ„ë¡œ
+ * ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
  * 
- * - Áï ÀÔ·ÂÀÌ 2347653ÀÌ¸é "234¸¸ 7Ãµ 6¹é 5½Ê 3ÀÔ´Ï´Ù."·Î Ãâ·Â
+ * - ì¦‰ ìž…ë ¥ì´ 2347653ì´ë©´ "234ë§Œ 7ì²œ 6ë°± 5ì‹­ 3ìž…ë‹ˆë‹¤."ë¡œ ì¶œë ¥
  */
 public class Prac06 {
 
 	public static void main(String[] args) {
 		
 		Scanner input = new Scanner(System.in);
-		System.out.println("Á¤¼ö ÇÏ³ª¸¦ ÀÔ·ÂÇÏ¼¼¿ä >> ");
+		System.out.println("ì •ìˆ˜ í•˜ë‚˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš” >> ");
 		
 		int num = input.nextInt();
 		
@@ -32,7 +32,7 @@ public class Prac06 {
 		int one = num % 10 / 1;
 		System.out.println(one);
 		
-		System.out.printf("%d¸¸ %dÃµ %d¹é %d½Ê %dÀÔ´Ï´Ù. %n", man, chun, beak, ten, one);
+		System.out.printf("%dë§Œ %dì²œ %dë°± %dì‹­ %dìž…ë‹ˆë‹¤. %n", man, chun, beak, ten, one);
 	}
 }
 

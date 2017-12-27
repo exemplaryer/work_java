@@ -8,16 +8,16 @@ public class PersonInfo {
 	static double height;
 	
 	public static void main(String[] args) {
-		System.out.print("¸ö¹«°Ô¿Í Å°¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+		System.out.print("ëª¸ë¬´ê²Œì™€ í‚¤ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
 		
-		// Å°º¸µå ÀÔ·ÂÀ» ¹ŞÀ» ÁØºñ ³¡
+		// í‚¤ë³´ë“œ ì…ë ¥ì„ ë°›ì„ ì¤€ë¹„ ë
 		Scanner x = new Scanner(System.in);
 		
 		weight = x.nextInt();
 		height = x.nextDouble();
 		
-		System.out.printf("¸ö¹«°Ô: %dkg, Å°: %fcm", weight, height);
-		System.out.println("¸ö¹«°Ô: " + weight + "kg, Å°: " + height + "cm");
+		System.out.printf("ëª¸ë¬´ê²Œ: %dkg, í‚¤: %fcm", weight, height);
+		System.out.println("ëª¸ë¬´ê²Œ: " + weight + "kg, í‚¤: " + height + "cm");
 		
 		x.close();		
 	}

@@ -3,14 +3,14 @@ package practice;
 import java.util.Scanner;
 
 /*
- * ¼¼ ¼ö¸¦ ÀÔ·Â¹Ş¾Æ °¡Àå Å« ¼ö¸¦ ±¸ÇÏ´Â ÇÁ·Î±×·¡¹ÖÀ» Á¶°Ç ¿¬»êÀÚ¸¦ ÀÌ¿ëÇÏ¿©
- * ÀÛ¼ºÇÏ½Ã¿À.
+ * ì„¸ ìˆ˜ë¥¼ ì…ë ¥ë°›ì•„ ê°€ì¥ í° ìˆ˜ë¥¼ êµ¬í•˜ëŠ” í”„ë¡œê·¸ë˜ë°ì„ ì¡°ê±´ ì—°ì‚°ìë¥¼ ì´ìš©í•˜ì—¬
+ * ì‘ì„±í•˜ì‹œì˜¤.
  */
 public class Prac08 {
 	
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		System.out.println("¼¼ ¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä >> ");
+		System.out.println("ì„¸ ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” >> ");
 		
 		int num01 = input.nextInt();
 		int num02 = input.nextInt();
@@ -19,7 +19,7 @@ public class Prac08 {
 		int res = num01 > num02 ? 
 				(num01 > num03 ? num01 : num03) : (num02 > num03 ? num02 : num03);
 				
-		System.out.println("°¡Àå Å« ¼ö: " + res);
+		System.out.println("ê°€ì¥ í° ìˆ˜: " + res);
 	}
 }
 

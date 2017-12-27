@@ -3,10 +3,10 @@ package exercise;
 public class HelloAndroid {
 	
 	public static void main(String[] args) {
-		// º¯¼ö ¼±¾ð
+		// ë³€ìˆ˜ ì„ ì–¸
 		String str;
 		
-		// ÃÊ±âÈ­
+		// ì´ˆê¸°í™”
 		str = "Hello, Android Application!";
 		System.out.println(str);
 	}

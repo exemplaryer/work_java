@@ -3,22 +3,22 @@ package practice;
 import java.util.Scanner;
 
 /*
- * ¹«°ÔÀÇ ´ÜÀ§ÀÎ Å³·Î±×·¥(kg)À» ¼Ò¼ö·Î ÀÔ·Â¹Þ¾Æ ÆÄ¿îµå(pound)·Î °è»êÇÏ¿©
- * ¼Ò¼öÁ¡ 3ÀÚ¸®±îÁö Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+ * ë¬´ê²Œì˜ ë‹¨ìœ„ì¸ í‚¬ë¡œê·¸ëž¨(kg)ì„ ì†Œìˆ˜ë¡œ ìž…ë ¥ë°›ì•„ íŒŒìš´ë“œ(pound)ë¡œ ê³„ì‚°í•˜ì—¬
+ * ì†Œìˆ˜ì  3ìžë¦¬ê¹Œì§€ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
  * 
- * - 1ÆÄ¿îµå(pound)´Â 0.453592Å³·Î±×·¥(kg)
+ * - 1íŒŒìš´ë“œ(pound)ëŠ” 0.453592í‚¬ë¡œê·¸ëž¨(kg)
  */
 public class Prac03 {
 	
 	public static void main(String[] args) {
 		
 		Scanner input = new Scanner(System.in);
-		System.out.println("Å³·Î±×·¥(kg)À» ÀÔ·ÂÇÏ¼¼¿ä >> ");
+		System.out.println("í‚¬ë¡œê·¸ëž¨(kg)ì„ ìž…ë ¥í•˜ì„¸ìš” >> ");
 		
 		double kg = input.nextDouble();
 		double pound = kg * 1000000 / 453592;
 		
-		System.out.printf("ÆÄ¿îµå(pound): %.3f", pound);
+		System.out.printf("íŒŒìš´ë“œ(pound): %.3f", pound);
 		
 	}
 }

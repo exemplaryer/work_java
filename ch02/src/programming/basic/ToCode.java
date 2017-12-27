@@ -4,7 +4,7 @@ public class ToCode {
 	
 	public static void main(String[] args) {
 		
-		char character = '\uc790';	// 'ÀÚ'
+		char character = '\uc790';	// 'ì'
 		System.out.println(character);
 		System.out.printf("%c", character);
 	}

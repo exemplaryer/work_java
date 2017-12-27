@@ -3,16 +3,16 @@ package practice;
 import java.util.Scanner;
 
 /*
- * Ç¥ÁØÀÔ·ÂÀ¸·Î µÎ ½Ç¼ö¸¦ ÀÔ·Â¹Ş¾Æ ÇÕ°ú Æò±ÕÀ» ±¸ÇÏ¿© Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À»
- * ÀÛ¼ºÇÏ½Ã¿À.
+ * í‘œì¤€ì…ë ¥ìœ¼ë¡œ ë‘ ì‹¤ìˆ˜ë¥¼ ì…ë ¥ë°›ì•„ í•©ê³¼ í‰ê· ì„ êµ¬í•˜ì—¬ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„
+ * ì‘ì„±í•˜ì‹œì˜¤.
  * 
- * - ÇÕ°ú Æò±Õ ¸ğµÎ ½Ç¼ö·Î Ãâ·Â
+ * - í•©ê³¼ í‰ê·  ëª¨ë‘ ì‹¤ìˆ˜ë¡œ ì¶œë ¥
  */
 public class Prac01 {
 	
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		System.out.println("µÎ ½Ç¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä >> ");
+		System.out.println("ë‘ ì‹¤ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” >> ");
 		
 		double num01 = input.nextDouble();
 		double num02 = input.nextDouble();
@@ -20,7 +20,7 @@ public class Prac01 {
 		double sum = num01 + num02;
 		double avg = sum / 2;
 		
-		System.out.printf("ÇÕ: %.2f, Æò±Õ: %.2f %n", sum, avg);
+		System.out.printf("í•©: %.2f, í‰ê· : %.2f %n", sum, avg);
 		
 		input.close();
 	}

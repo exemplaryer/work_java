@@ -6,8 +6,8 @@ public class ToYard {
 		double meter = 100.785;
 		System.out.println(meter * 1.0936);
 		
-		double dollar = 10.28; // 10´Þ·¯ 28¼¾Æ®
-		double dollar2 = 20.10; // 20´Þ·¯ 10¼¾Æ®
+		double dollar = 10.28; // 10ë‹¬ëŸ¬ 28ì„¼íŠ¸
+		double dollar2 = 20.10; // 20ë‹¬ëŸ¬ 10ì„¼íŠ¸
 		
 		double result1 = dollar + dollar2;
 		double result2 = dollar - dollar2;

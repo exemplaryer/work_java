@@ -3,10 +3,10 @@ package practice;
 import java.util.Scanner;
 
 /*
- * ¹®ÀÚ ÇÏ³ª¿Í ¿Âµµ¸¦ ½Ç¼öÇüÀ¸·Î ÀÔ·Â¹Þ¾Æ, ¹®ÀÚ°¡ F³ª fÀÌ¸é ÀÔ·Â¹ÞÀº °ªÀ»
- * È­¾¾·Î °£ÁÖÇÏ¿© ¼·¾¾·Î ¹Ù²Ù°í,
- * ÀÔ·Â¹ÞÀº ¹®ÀÚ°¡ C³ª cÀÌ¸é ÀÔ·Â¹ÞÀº °ªÀ» ¼·¾¾·Î °£ÁÖÇÏ¿© È­¾¾·Î ¹Ù²Ù¾î °á°ú¸¦
- * Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+ * ë¬¸ìž í•˜ë‚˜ì™€ ì˜¨ë„ë¥¼ ì‹¤ìˆ˜í˜•ìœ¼ë¡œ ìž…ë ¥ë°›ì•„, ë¬¸ìžê°€ Fë‚˜ fì´ë©´ ìž…ë ¥ë°›ì€ ê°’ì„
+ * í™”ì”¨ë¡œ ê°„ì£¼í•˜ì—¬ ì„­ì”¨ë¡œ ë°”ê¾¸ê³ ,
+ * ìž…ë ¥ë°›ì€ ë¬¸ìžê°€ Cë‚˜ cì´ë©´ ìž…ë ¥ë°›ì€ ê°’ì„ ì„­ì”¨ë¡œ ê°„ì£¼í•˜ì—¬ í™”ì”¨ë¡œ ë°”ê¾¸ì–´ ê²°ê³¼ë¥¼
+ * ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
  * 
  * - F = (9.0 / 5.0) * C + 32
  * - C = (5.0 / 9.0) * (F - 32)
@@ -16,11 +16,11 @@ public class Prac04 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		
-		System.out.println("¹®ÀÚ ÇÏ³ª¸¦ ÀÔ·ÂÇÏ¼¼¿ä (C: ¼·¾¾, F: È­¾¾) >> ");
+		System.out.println("ë¬¸ìž í•˜ë‚˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš” (C: ì„­ì”¨, F: í™”ì”¨) >> ");
 		String inputString = input.next();
 		char unit = inputString.charAt(0);
 		
-		System.out.println("¿Âµµ¸¦ ÀÔ·ÂÇÏ¼¼¿ä >> ");
+		System.out.println("ì˜¨ë„ë¥¼ ìž…ë ¥í•˜ì„¸ìš” >> ");
 		double degree = input.nextDouble();
 		
 		double result = 0.0;
@@ -28,13 +28,13 @@ public class Prac04 {
 			case 'F':
 			case 'f':
 				result = (5.0 / 9.0) * (degree - 32);
-				System.out.format("¼·¾¾ %.2f ÀÔ´Ï´Ù.", result);
+				System.out.format("ì„­ì”¨ %.2f ìž…ë‹ˆë‹¤.", result);
 				break;
 				
 			case 'C':
 			case 'c':
 				result = (9.0 / 5.0) * degree + 32;
-				System.out.format("È­¾¾ %.2f ÀÔ´Ï´Ù.", result);
+				System.out.format("í™”ì”¨ %.2f ìž…ë‹ˆë‹¤.", result);
 				break;
 		}
 	}

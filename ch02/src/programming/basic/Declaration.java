@@ -4,6 +4,6 @@ public class Declaration {
 	
 	public static void main(String[] args) {
 		int year = 1995;
-		System.out.format("ÀÚ¹Ù´Â %d³âµµ¿¡ °³¹ßµÇ¾ú´Ù.", year);
+		System.out.format("ìë°”ëŠ” %dë…„ë„ì— ê°œë°œë˜ì—ˆë‹¤.", year);
 	}
 }

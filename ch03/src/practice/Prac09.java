@@ -3,25 +3,25 @@ package practice;
 import java.util.Scanner;
 
 /*
- * г╔аьют╥бю╦╥н е╟©м ╦Ж╧╚╟т╦╕ ╫г╪Ж╥н ют╥б╧ч╬ф ╢ыю╫ а╤╟гю╩ юл©Кго©╘ а╓╩СюнаЖ,
- * ╨Я╦╦юнаЖ цБ╥бго╢б га╥н╠в╥╔ю╩ юш╪╨го╫ц©ю.
+ * М▒°Л╓─Л·┘К═╔Л°╪К║° М┌╓Л≥─ К╙╦К╛╢Й╡▄К╔╪ Л▀╓Л┬≤К║° Л·┘К═╔К╟⌡Л∙└ К▀╓Л²▄ Л║╟Й╠╢Л²└ Л²╢Л ╘М∙≤Л≈╛ Л═∙Л┐│Л²╦Л╖─,
+ * К╧└К╖▄Л²╦Л╖─ Л╤°К═╔М∙≤К┼■ М■└К║°Й╥╦К·╗Л²└ Л·▒Л└╠М∙≤Л▀°Л≤╓.
  * 
- * - (╦Ж╧╚╟т <= (е╟ - 100) * 0.9)юл╦И а╓╩С, ╬ф╢о╦И ╨Я╦╦
+ * - (К╙╦К╛╢Й╡▄ <= (М┌╓ - 100) * 0.9)Л²╢К╘╢ Л═∙Л┐│, Л∙└К▀┬К╘╢ К╧└К╖▄
  */
 public class Prac09 {
 	
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		
-		System.out.println("е╟©м ╦Ж╧╚╟т╦╕ ╪Ь╪╜╢К╥н ют╥бго╪╪©Д >> ");
+		System.out.println("М┌╓Л≥─ К╙╦К╛╢Й╡▄К╔╪ Л┬°Л└°К▄─К║° Л·┘К═╔М∙≤Л└╦Л ■ >> ");
 		double height = input.nextDouble();
 		double weight = input.nextDouble();
 		
 		if (weight <= ((height - 100) * 0.9)) {
-			System.out.println("а╓╩С ют╢о╢ы.");
+			System.out.println("Л═∙Л┐│ Л·┘К▀┬К▀╓.");
 		}
 		else {
-			System.out.println("╨Я╦╦ ют╢о╢ы.");
+			System.out.println("К╧└К╖▄ Л·┘К▀┬К▀╓.");
 		}
 	}
 }

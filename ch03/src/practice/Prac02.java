@@ -3,32 +3,32 @@ package practice;
 import java.util.Scanner;
 
 /*
- * À§ ÇÁ·Î±×·¥¿¡¼­ ´ÙÀ½ Á¶°ÇÀ» ¸¸Á·ÇÏ´Â ÇÁ·Î±×·¥À¸·Î ¼öÁ¤ÇÏ¿© ÀÛ¼ºÇÏ½Ã¿À.
+ * ìœ„ í”„ë¡œê·¸ë¨ì—ì„œ ë‹¤ìŒ ì¡°ê±´ì„ ë§Œì¡±í•˜ëŠ” í”„ë¡œê·¸ë¨ìœ¼ë¡œ ìˆ˜ì •í•˜ì—¬ ì‘ì„±í•˜ì‹œì˜¤.
  * 
- * - ÀÔ·Â¹ŞÀº µÎ ½Ç¼ö¸¦ ¸ğµÎ Á¤¼ö·Î º¯È¯ÇÏ¿© ÇÕ°ú Æò±Õ ¸ğµÎ ½Ç¼ö·Î Ãâ·Â
+ * - ì…ë ¥ë°›ì€ ë‘ ì‹¤ìˆ˜ë¥¼ ëª¨ë‘ ì •ìˆ˜ë¡œ ë³€í™˜í•˜ì—¬ í•©ê³¼ í‰ê·  ëª¨ë‘ ì‹¤ìˆ˜ë¡œ ì¶œë ¥
  */
 public class Prac02 {
 	
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		System.out.println("µÎ ½Ç¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä >> ");
+		System.out.println("ë‘ ì‹¤ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” >> ");
 		
-		// ¸í½ÃÀû Çüº¯È¯
+		// ëª…ì‹œì  í˜•ë³€í™˜
 		int num01 = (int)input.nextDouble();
 		int num02 = (int)input.nextDouble();
 		
-		// ¹¬½ÃÀû Çüº¯È¯
+		// ë¬µì‹œì  í˜•ë³€í™˜
 		/*
-		 * num01°ú num02ÀÇ ÇÕÀº int ÇüÀÌ°í
-		 * double sum º¯¼ö¿¡ Áı¾î³ÖÀ» ¶§ ÀÚµ¿À¸·Î double ÇüÀ¸·Î º¯°æµÈ´Ù.
+		 * num01ê³¼ num02ì˜ í•©ì€ int í˜•ì´ê³ 
+		 * double sum ë³€ìˆ˜ì— ì§‘ì–´ë„£ì„ ë•Œ ìë™ìœ¼ë¡œ double í˜•ìœ¼ë¡œ ë³€ê²½ëœë‹¤.
 		 * 
-		 * double sum°ú intÇü 2¸¦ ³ª´©¸é °á°ú´Â doubleÇüÀÌ°í
-		 * ¸¶Âù°¡Áö·Î double avg º¯¼ö¿¡ Áı¾î ³Ö¾ú±â ¶§¹®¿¡ ÀÚµ¿À¸·Î double ÇüÀ¸·Î º¯°æµÈ´Ù.
+		 * double sumê³¼ intí˜• 2ë¥¼ ë‚˜ëˆ„ë©´ ê²°ê³¼ëŠ” doubleí˜•ì´ê³ 
+		 * ë§ˆì°¬ê°€ì§€ë¡œ double avg ë³€ìˆ˜ì— ì§‘ì–´ ë„£ì—ˆê¸° ë•Œë¬¸ì— ìë™ìœ¼ë¡œ double í˜•ìœ¼ë¡œ ë³€ê²½ëœë‹¤.
 		 */
 		double sum = num01 + num02;
 		double avg = sum / 2;
 		
-		System.out.printf("ÇÕ: %.2f, Æò±Õ: %.2f %n", sum, avg);
+		System.out.printf("í•©: %.2f, í‰ê· : %.2f %n", sum, avg);
 		
 		input.close();
 	}

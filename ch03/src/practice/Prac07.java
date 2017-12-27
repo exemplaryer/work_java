@@ -3,25 +3,25 @@ package practice;
 import java.util.Scanner;
 
 /*
- * Á¶°Ç¿¬»êÀÚ(»ïÇ×¿¬»êÀÚ)¸¦ ÀÌ¿ëÇÏ¿© ÀÓÀÇÀÇ ´ŞÀ» ÀÔ·Â¹Ş¾Æ ÀÌ ´ŞÀÌ »ó¹İ±âÀÌ¸é "»ó¹İ±âÀÔ´Ï´Ù."¸¦
- * ÇÏ¹İ±âÀÌ¸é "ÇÏ¹İ±âÀÔ´Ï´Ù."¸¦ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+ * ì¡°ê±´ì—°ì‚°ì(ì‚¼í•­ì—°ì‚°ì)ë¥¼ ì´ìš©í•˜ì—¬ ì„ì˜ì˜ ë‹¬ì„ ì…ë ¥ë°›ì•„ ì´ ë‹¬ì´ ìƒë°˜ê¸°ì´ë©´ "ìƒë°˜ê¸°ì…ë‹ˆë‹¤."ë¥¼
+ * í•˜ë°˜ê¸°ì´ë©´ "í•˜ë°˜ê¸°ì…ë‹ˆë‹¤."ë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
  */
 public class Prac07 {
 	
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		System.out.println("´ŞÀ» ÀÔ·ÂÇÏ¼¼¿ä >> ");
+		System.out.println("ë‹¬ì„ ì…ë ¥í•˜ì„¸ìš” >> ");
 		
 		int month = input.nextInt();
 		
 		/*if (month > 0 && month <= 6) {
-			System.out.println("»ó¹İ±âÀÔ´Ï´Ù.");
+			System.out.println("ìƒë°˜ê¸°ì…ë‹ˆë‹¤.");
 		}
 		else if (month >= 7 && month <= 12) {
-			System.out.println("ÇÏ¹İ±âÀÔ´Ï´Ù.");
+			System.out.println("í•˜ë°˜ê¸°ì…ë‹ˆë‹¤.");
 		}*/
 		
-		String result = month > 6 ? "ÇÏ¹İ±âÀÔ´Ï´Ù." : "»ó¹İ±âÀÔ´Ï´Ù.";
+		String result = month > 6 ? "í•˜ë°˜ê¸°ì…ë‹ˆë‹¤." : "ìƒë°˜ê¸°ì…ë‹ˆë‹¤.";
 		System.out.println(result);
 	}
 }
