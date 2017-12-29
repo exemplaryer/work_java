@@ -1,6 +1,6 @@
 package Practice;
 
-// 구구단 2: 세로로 같은 단 출력
+// 구구단 2: 세로로 같은 단 출력 
 public class Prac13 {
 
 	public static void main(String[] args) {
