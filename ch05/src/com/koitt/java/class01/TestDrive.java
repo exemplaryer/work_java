@@ -5,7 +5,13 @@ public class TestDrive {
 	public static void main(String[] args) {
 
 		// 강사 sanghoon 생성 - Teacher 클래스의 객체(Object)를 생성
+		/*
+		 * Teacher()는 기본 생성자를 호출한 것이다.
+		 */
 		Teacher sanghoon = new Teacher();
+		Teacher changmok = new Teacher("수학");
+		Teacher gildong = new Teacher("국어", 3);
+		Teacher younghee = new Teacher("영어", 10, "영희선생 어학원");
 
 		// 강사 sanghoon의 정보 입력
 		sanghoon.setAddress("상도동");
@@ -16,6 +22,10 @@ public class TestDrive {
 		sanghoon.setSsn("861201");
 		sanghoon.setSubject("프로그래밍");
 		sanghoon.setYear(1);
+		
+		// Person의 print() 메소드 호출
+		sanghoon.print();			// Person의 print() 메소드 호출
+		sanghoon.print();			// Teacher의 printTeacher() 메소드 호출
 
 		// 학생 taehyun 생성 - Student 클래스의 객체(Object)를 생성
 		Student taehyun = new Student();
