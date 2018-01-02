@@ -70,6 +70,9 @@ public class Teacher extends Person {
 	 */
 	@Override	// 오버라이딩을 했다는 표시를 위한 애노테이션(Annotation)
 	public void print() {
-		System.out.println("과목: " + this.subject + ", " + "강의년수: " + this.year);
+		System.out.println("주민등록번호: " + this.getSsn() + ", " + 
+				"주소: " + this.getAddress() + ", " + 
+				"과목: " + this.subject + ", " + 
+				"강의년수: " + this.year);
 	}
 }
