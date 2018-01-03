@@ -56,6 +56,14 @@ public class Car {
 		this.maxSpeed = maxSpeed;
 	}
 	
+	public String getBrandName() {
+		return brandName;
+	}
+
+	public void setBrandName(String brandName) {
+		this.brandName = brandName;
+	}
+
 	public static void main(String[] args) {
 		Car myCar = new Car("포르쉐", 300);
 		myCar.speedUp();
