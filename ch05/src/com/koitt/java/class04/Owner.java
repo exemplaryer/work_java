@@ -14,7 +14,7 @@ public class Owner {
 	}
 
 	// getter, setter
-	/*public String getName() {
+	public String getName() {
 		return name;
 	}
 
@@ -28,7 +28,7 @@ public class Owner {
 
 	public void setCar(Car car) {
 		this.car = car;
-	}*/
+	}
 	
 	// 자신의 차량을 소개하는 메소드
 	public void introCar() {
