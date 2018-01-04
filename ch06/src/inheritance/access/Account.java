@@ -6,7 +6,7 @@ import java.util.Date;
  * 접근제한자 (접근지정자)
  * - private : 같은 클래스 내부에서만 사용가능
  * - (default, package 방식) : 패키지 내부에서만 사용가능
- * - protected : default 접근 범위 + 상속받은 클래스 내부까지 사용가능
+ * - protected : default 접근 범위 + 상속받은 그! 클래스 내부까지 사용가능
  * - public : 어디서든 접근이 가능
  */
 public class Account {
