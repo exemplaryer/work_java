@@ -33,6 +33,10 @@ public class Account {
 	}
 	
 	public long withdraw(long amount) {
+		if (this.balance < amount) {
+			System.out.println("인출하려는 금액보다 잔액이 적습니다.");
+			return this.balance = 0;
+		}
 		return this.balance -= amount;
 	}
 	
