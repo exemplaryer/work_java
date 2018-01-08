@@ -5,7 +5,7 @@ package com.koitt.java.deliver;
  */
 public abstract class Process {
 	// 1. 주문받기
-	public abstract void ordering(); 
+	public abstract void ordering();
 	
 	// 2. 요리하기
 	public abstract void cooking();
