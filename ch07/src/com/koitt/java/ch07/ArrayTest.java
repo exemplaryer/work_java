@@ -32,10 +32,9 @@ public class ArrayTest {
 				
 				// 집어 넣으려는 index번호 뒤쪽 데이터를 한칸씩 뒤로 이동
 				System.arraycopy(this.array, index, this.array, index + 1, this.length - index);
-				
 				this.array[index] = value;	// 새로 추가하려는 값을 배열에 저장
-				this.length += 1;			// 기존 데이터 개수 + 새로운 데이터 개수
 			}
+			this.length += 1;	// 기존 데이터 개수 + 새로운 데이터 개수
 		}
 	}
 	
@@ -49,6 +48,10 @@ public class ArrayTest {
 		
 	}
 	
+	public Integer get(int index) {
+		return this.array[index];
+	}
+	
 	public Integer[] getArray() {
 		return array;
 	}
@@ -59,12 +62,29 @@ public class ArrayTest {
 
 	public static void main(String[] args) {
 		ArrayTest test = new ArrayTest(3);
+		
 		test.add(0, 2);
 		for (int i = 0; i < test.getLength(); i++) {
-			
+			System.out.print(test.get(i));
 		}
-		test.add(0, 3);
-		test.add(0, 4);
-		test.add(1, 1);	
+		System.out.println();
+		
+		test.add(1, 3);
+		for (int i = 0; i < test.getLength(); i++) {
+			System.out.print(test.get(i));
+		}
+		System.out.println();
+		
+		test.add(2, 4);
+		for (int i = 0; i < test.getLength(); i++) {
+			System.out.print(test.get(i));
+		}
+		System.out.println();
+		
+		test.add(1, 1);
+		for (int i = 0; i < test.getLength(); i++) {
+			System.out.print(test.get(i));
+		}
+		System.out.println();
 	}
 }
