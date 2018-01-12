@@ -17,20 +17,37 @@ public class Person extends Object implements Serializable {
 		this.age = age;
 	}
 	
-	// 3. equals 구현
+	// 3. Getter, Setter 구현
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	// 4. equals 구현
 	@Override
 	public boolean equals(Object obj) {
-		// 3-1. 나 자신과 Argument의 객체 주소값 비교
+		// 4-1. 나 자신과 Argument의 객체 주소값 비교
 		if (this == obj) {
 			return true;
 		}
 		
-		// 3-2. obj가 현재 클래스를 상속받고 있는지 확인
+		// 4-2. obj가 현재 클래스를 상속받고 있는지 확인
 		if (!(obj instanceof Person)) {
 			return false;
 		}
 		
-		// 3-3. name 필드값이 같다면 같은 객체로 결과를 리턴
+		// 4-3. name 필드값이 같다면 같은 객체로 결과를 리턴
 		Person p = (Person) obj;
 		if (this.name.equals(p.name)) {
 			return true;
@@ -39,13 +56,13 @@ public class Person extends Object implements Serializable {
 		return false;
 	}
 	
-	// 4. hashCode 구현: 객체 하나를 하나의 숫자로 표현하는 메소드 (가짜 주소값)
+	// 5. hashCode 구현: 객체 하나를 하나의 숫자로 표현하는 메소드 (가짜 주소값)
 	@Override
 	public int hashCode() {
 		return this.name.hashCode() + this.age;
 	}
 	
-	// 5. 객체의 내용을 문자열로 표현하는 메소드
+	// 6. 객체의 내용을 문자열로 표현하는 메소드
 	@Override
 	public String toString() {
 		// String a = "name = " + this.name + ", age = " + this.age;
