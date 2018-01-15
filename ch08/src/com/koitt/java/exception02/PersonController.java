@@ -29,7 +29,7 @@ public class PersonController {
 			System.out.print("메뉴번호 입력 > ");
 			
 			// 입력받은 메뉴번호
-			int menu = input.nextInt();
+			int menu = Integer.parseInt(input.nextLine()); // 한 줄 단위로 입력받음(String 타입)
 			
 			switch (menu) {
 				case 1:
@@ -56,14 +56,14 @@ public class PersonController {
 		System.out.println("=== 사람 정보를 입력해 주세요 (quit: 종료) ===");
 		
 		System.out.print("이름: ");
-		String name = this.input.next();
+		String name = this.input.nextLine();	// 한 줄 입력받음
 		
 		System.out.print("나이: ");
 		Integer age = null;
 		try {
-			age = this.input.nextInt();
+			age = Integer.parseInt(this.input.nextLine());	// 한 줄 입력받음
 		}
-		catch (InputMismatchException e) {
+		catch (NumberFormatException e) {
 			System.out.println("숫자만 입력해주세요.");
 			return;
 		}
