@@ -67,6 +67,10 @@ public class PersonController {
 			System.out.println("숫자만 입력해주세요.");
 			return;
 		}
+		catch (Exception e) {
+			System.out.println("알 수 없는 예외발생");
+			return;
+		}
 		
 		// 입력받은 정보를 객체화
 		Person p = new Person(name, age);
