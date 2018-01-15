@@ -26,7 +26,8 @@ public class PersonController {
 			System.out.println("1. 인적사항 입력");
 			System.out.println("2. 인적사항 전체출력");
 			System.out.println("3. 인적사항 삭제");
-			System.out.println("4. 프로그램 종료");
+			System.out.println("4. 인적사항 수정");
+			System.out.println("5. 프로그램 종료");
 			System.out.print("메뉴번호 입력 > ");
 			
 			// 입력받은 메뉴번호
@@ -46,6 +47,10 @@ public class PersonController {
 					break;
 					
 				case 4:
+					controller.menuModify();
+					break;
+					
+				case 5:
 					System.out.println("프로그램 종료하겠습니다. 안녕히 계세요~");
 					System.exit(0);	// 프로그램 종료, 0: 정상종료, -1: 비정상종료
 					// exit의 숫자는 운영체제가 사용
@@ -114,6 +119,26 @@ public class PersonController {
 		try {
 			service.remove(p);
 			System.out.println(p.getName() + "님이 삭제 되었습니다.");
+		}
+		catch (MyException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	public void menuModify() {
+		System.out.println("=== 수정할 사람 정보를 입력해 주세요 ===");
+		
+		System.out.print("이름: ");
+		String name = this.input.nextLine();
+		
+		System.out.print("나이: ");
+		Integer age = Integer.parseInt(this.input.nextLine());
+		
+		Person p = new Person(name, age);
+		
+		try {
+			service.modify(p);
+			System.out.println(p.getName() + "님의 정보가 수정되었습니다.");
 		}
 		catch (MyException e) {
 			System.out.println(e.getMessage());

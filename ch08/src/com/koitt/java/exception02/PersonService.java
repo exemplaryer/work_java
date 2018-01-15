@@ -21,4 +21,8 @@ public class PersonService {
 	public void remove(Person p) throws MyException {
 		dao.delete(p);
 	}
+	
+	public void modify(Person p) throws MyException {
+		dao.update(p);
+	}
 }
