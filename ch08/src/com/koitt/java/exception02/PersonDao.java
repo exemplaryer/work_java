@@ -28,7 +28,28 @@ public class PersonDao {
 		this.list.add(p);
 	}
 	
+	// 전체 목록 가져오기
 	public List<Person> selectAll() {
 		return this.list;
+	}
+	
+	// Argument로 전달받은 객체를 list에서 제거
+	public void delete(Person p) throws MyException {
+		// list에서 Argument로 전달받은 객체의 name과 동일한 객체가 있는지 확인
+		/*for (Person item : this.list) {
+			if (item.equals(p)) {
+				this.list.remove(item);
+				//return;
+			}
+		}*/
+		
+		for (int i = 0; i < this.list.size(); i++) {
+			if (this.list.get(i).equals(p)) {
+				this.list.remove(i);
+				return;
+			}
+		}
+		
+		throw new MyException("E02: 삭제할 사람이 없습니다.");
 	}
 }

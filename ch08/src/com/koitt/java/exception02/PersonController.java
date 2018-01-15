@@ -25,7 +25,8 @@ public class PersonController {
 			System.out.println("=== 인적사항 관리 프로그램 ===");
 			System.out.println("1. 인적사항 입력");
 			System.out.println("2. 인적사항 전체출력");
-			System.out.println("3. 프로그램 종료");
+			System.out.println("3. 인적사항 삭제");
+			System.out.println("4. 프로그램 종료");
 			System.out.print("메뉴번호 입력 > ");
 			
 			// 입력받은 메뉴번호
@@ -41,6 +42,10 @@ public class PersonController {
 					break;
 					
 				case 3:
+					controller.menuRemove();
+					break;
+					
+				case 4:
 					System.out.println("프로그램 종료하겠습니다. 안녕히 계세요~");
 					System.exit(0);	// 프로그램 종료, 0: 정상종료, -1: 비정상종료
 					// exit의 숫자는 운영체제가 사용
@@ -95,6 +100,23 @@ public class PersonController {
 		// for-each문을 통해 list에 담긴 인적사항 하나하나 출력하기
 		for (Person item : list) {
 			System.out.println(item);
+		}
+	}
+	
+	public void menuRemove() {
+		System.out.println("=== 삭제할 사람 정보를 입력해 주세요 ===");
+		
+		System.out.print("이름: ");
+		String name = this.input.nextLine();	// 한 줄 입력받음
+		
+		Person p = new Person(name, null);
+		
+		try {
+			service.remove(p);
+			System.out.println(p.getName() + "님이 삭제 되었습니다.");
+		}
+		catch (MyException e) {
+			System.out.println(e.getMessage());
 		}
 	}
 }
