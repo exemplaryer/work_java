@@ -1,5 +1,6 @@
 package com.koitt.java.exception02;
 
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -58,7 +59,14 @@ public class PersonController {
 		String name = this.input.next();
 		
 		System.out.print("나이: ");
-		int age = this.input.nextInt();
+		Integer age = null;
+		try {
+			age = this.input.nextInt();
+		}
+		catch (InputMismatchException e) {
+			System.out.println("숫자만 입력해주세요.");
+			return;
+		}
 		
 		// 입력받은 정보를 객체화
 		Person p = new Person(name, age);
