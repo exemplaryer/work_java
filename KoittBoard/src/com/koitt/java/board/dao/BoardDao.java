@@ -3,6 +3,7 @@ package com.koitt.java.board.dao;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.koitt.java.board.exception.BoardException;
 import com.koitt.java.board.model.Board;
 
 public class BoardDao {
@@ -14,7 +15,15 @@ public class BoardDao {
 		this.list = new ArrayList<Board>();
 	}
 	
-	public void insert(Board board) {
+									// 2.
+	public void insert(Board board) throws BoardException {
+		for (Board item : this.list) {
+			if (item.equals(board)) {
+				// 1. 기존 등록된 같은 번호의 게시글이 존재할 경우
+				throw new BoardException("E01: 중복된 번호의 게시글입니다.");
+			}
+		}
+		
 		list.add(board);
 	}
 	

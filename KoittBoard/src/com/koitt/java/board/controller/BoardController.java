@@ -3,6 +3,7 @@ package com.koitt.java.board.controller;
 import java.util.List;
 import java.util.Scanner;
 
+import com.koitt.java.board.exception.BoardException;
 import com.koitt.java.board.model.Board;
 import com.koitt.java.board.service.BoardService;
 
@@ -83,8 +84,15 @@ public class BoardController {
 		 */
 		Board board = new Board(null, title, content, writer, null);
 		
-		// 생성한 객체를 service로 전달한다.
-		this.service.add(board);
+		// 4.
+		try {
+			// 생성한 객체를 service로 전달한다.
+			this.service.add(board);
+			System.out.println("입력완료!");
+		}
+		catch (BoardException e) {
+			System.out.println(e.getMessage());
+		}
 	}
 	
 	// 3.
