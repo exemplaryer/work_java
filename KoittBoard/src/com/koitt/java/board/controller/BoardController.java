@@ -32,7 +32,15 @@ public class BoardController {
 			System.out.println("5. 프로그램 종료");
 			System.out.print("메뉴번호 입력 > ");
 			
-			int menu = Integer.parseInt(input.nextLine());
+			// 1.
+			int menu = -1;	// try 안쪽에 있던 menu 변수를 바깥으로 뺐다.
+			try {
+				menu = Integer.parseInt(input.nextLine());
+			}
+			catch (NumberFormatException e) {
+				System.out.println("숫자만 입력하세요.");
+				continue;	// 현재 반복문을 중단하지 않고 다시 처음으로 돌아간다.
+			}
 			
 			switch (menu) {
 				case 1:
