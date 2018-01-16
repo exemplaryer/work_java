@@ -45,8 +45,8 @@ public class BoardDao {
 		throw new BoardException("E02: 삭제할 게시글이 존재하지 않습니다.");
 	}
 	
-	// 1.
-	public void update(Board board) {
+	// 1.							// 2.
+	public void update(Board board) throws BoardException {
 		for (Board item : this.list) {
 			if (item.equals(board)) {
 				/*
@@ -56,7 +56,11 @@ public class BoardDao {
 				 */
 				item.setContent(board.getContent());
 				item.setTitle(board.getTitle());
+				return;
 			}
 		}
+		
+		// 1.
+		throw new BoardException("E03: 수정할 게시글이 존재하지 않습니다.");
 	}
 }

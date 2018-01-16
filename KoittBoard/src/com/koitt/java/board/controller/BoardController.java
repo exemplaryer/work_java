@@ -144,6 +144,13 @@ public class BoardController {
 		 */
 		Board board = new Board(id, title, content, null, null);
 		
-		this.service.modify(board);
+		// 4.
+		try {
+			this.service.modify(board);
+			System.out.println(board.getId() + "번 글이 수정되었습니다.");
+		}
+		catch (BoardException e) {
+			System.out.println(e.getMessage());
+		}
 	}
 }

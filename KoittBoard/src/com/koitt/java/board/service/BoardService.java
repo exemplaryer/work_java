@@ -34,8 +34,8 @@ public class BoardService {
 		dao.delete(board);
 	}
 	
-	// 2.
-	public void modify(Board board) {
+	// 2.							// 3.
+	public void modify(Board board) throws BoardException {
 		dao.update(board);
 	}
 }
