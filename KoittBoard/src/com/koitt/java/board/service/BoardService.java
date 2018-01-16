@@ -1,6 +1,7 @@
 package com.koitt.java.board.service;
 
 import java.util.Date;
+import java.util.List;
 
 import com.koitt.java.board.dao.BoardDao;
 import com.koitt.java.board.model.Board;
@@ -19,5 +20,10 @@ public class BoardService {
 		board.setId(++this.count);		// null값이었던 id값을 채워준다.
 		board.setRegDate(new Date());	// new Date() 하는 순간의 시간이 저장된다.
 		this.dao.insert(board);			// 자료구조(ArrayList)에 저장하기 위해 dao로 board 객체를 전달
+	}
+	
+	// 2.
+	public List<Board> read() {
+		return dao.selectAll();
 	}
 }

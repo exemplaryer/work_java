@@ -17,4 +17,9 @@ public class BoardDao {
 	public void insert(Board board) {
 		list.add(board);
 	}
+	
+	// 1.
+	public List<Board> selectAll() {
+		return this.list;
+	}
 }

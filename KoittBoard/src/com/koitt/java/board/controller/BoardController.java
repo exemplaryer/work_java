@@ -1,5 +1,6 @@
 package com.koitt.java.board.controller;
 
+import java.util.List;
 import java.util.Scanner;
 
 import com.koitt.java.board.model.Board;
@@ -76,5 +77,14 @@ public class BoardController {
 		
 		// 생성한 객체를 service로 전달한다.
 		this.service.add(board);
+	}
+	
+	// 3.
+	public void menuRead() {
+		System.out.println("=== 게시글 전체목록 출력 ===");
+		List<Board> list = this.service.read();
+		for (Board item : list) {
+			System.out.println(item);
+		}
 	}
 }
