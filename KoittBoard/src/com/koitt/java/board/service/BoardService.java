@@ -39,4 +39,9 @@ public class BoardService {
 		board.setModiDate(new Date());	// 9.
 		dao.update(board);
 	}
+	
+	// 2.
+	public boolean isExist(Board board) {
+		return dao.isExist(board);
+	}
 }

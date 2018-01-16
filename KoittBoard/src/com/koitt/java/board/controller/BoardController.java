@@ -73,7 +73,7 @@ public class BoardController {
 			}
 		}
 	}
-	
+
 	public void menuAdd() {
 		System.out.println("=== 게시글 추가 ===");
 		
@@ -156,6 +156,14 @@ public class BoardController {
 		}
 		catch (NumberFormatException e) {
 			System.out.println("숫자만 입력하세요.");
+			return;
+		}
+		
+		// 4.
+		Board tempBoard = new Board(id, null, null, null, null, null);
+		boolean isExist = this.service.isExist(tempBoard);
+		if (!isExist) {
+			System.out.println("해당 번호의 게시글이 존재하지 않습니다.");
 			return;
 		}
 		

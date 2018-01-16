@@ -64,4 +64,15 @@ public class BoardDao {
 		// 1.
 		throw new BoardException("E03: 수정할 게시글이 존재하지 않습니다.");
 	}
+	
+	// 1. 해당 글이 존재하는지 여부 확인 메소드
+	public boolean isExist(Board board) {
+		for (Board item : this.list) {
+			if (item.equals(board)) {
+				return true;	// 글이 존재할 경우 존재한다고 리턴
+			}
+		}
+		
+		return false;	// 다 찾아봤는데 없어서 false 리턴
+	}
 }
