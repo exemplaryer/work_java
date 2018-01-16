@@ -90,8 +90,8 @@ public class BoardController {
 		 *  id가 null값인 이유는 Service에서 id값을 생성하기 때문에
 		 *  regDate가 null값인 이유는 Controller는 화면관련 클래스이기 때문에
 		 *  regDate의 초기화는 Service 클래스에 맡긴다.
-		 */
-		Board board = new Board(null, title, content, writer, null);
+		 */															// 7.
+		Board board = new Board(null, title, content, writer, null, null);
 		
 		// 4.
 		try {
@@ -168,8 +168,8 @@ public class BoardController {
 		/*
 		 * writer: 변경되지 않기 때문에 null
 		 * regDate: 변경되지 않기 때문에 null
-		 */
-		Board board = new Board(id, title, content, null, null);
+		 */														// 8.
+		Board board = new Board(id, title, content, null, null, null);
 		
 		// 4.
 		try {

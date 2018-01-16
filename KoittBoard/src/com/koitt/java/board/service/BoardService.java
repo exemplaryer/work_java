@@ -36,6 +36,7 @@ public class BoardService {
 	
 	// 2.							// 3.
 	public void modify(Board board) throws BoardException {
+		board.setModiDate(new Date());	// 9.
 		dao.update(board);
 	}
 }

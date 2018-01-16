@@ -56,6 +56,7 @@ public class BoardDao {
 				 */
 				item.setContent(board.getContent());
 				item.setTitle(board.getTitle());
+				item.setModiDate(board.getModiDate());
 				return;
 			}
 		}
