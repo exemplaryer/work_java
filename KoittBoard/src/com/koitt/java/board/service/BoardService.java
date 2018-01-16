@@ -26,4 +26,9 @@ public class BoardService {
 	public List<Board> read() {
 		return dao.selectAll();
 	}
+	
+	// 2.
+	public void remove(Board board) {
+		dao.delete(board);
+	}
 }

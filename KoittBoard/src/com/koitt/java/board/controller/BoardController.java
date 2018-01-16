@@ -39,9 +39,12 @@ public class BoardController {
 					break;
 					
 				case 2:
+					controller.menuRead();
 					break;
 					
 				case 3:
+					// 4.
+					controller.menuRemove();
 					break;
 				
 				case 4:
@@ -86,5 +89,19 @@ public class BoardController {
 		for (Board item : list) {
 			System.out.println(item);
 		}
+	}
+	
+	// 3.
+	public void menuRemove() {
+		System.out.println("=== 게시글 삭제 ===");
+		
+		System.out.print("삭제할 글 번호를 입력하세요: ");
+		Integer id = Integer.parseInt(this.input.nextLine());
+		
+		//Board board = new Board(id, null, null, null, null);
+		Board board = new Board();
+		board.setId(id);
+		
+		this.service.remove(board);
 	}
 }

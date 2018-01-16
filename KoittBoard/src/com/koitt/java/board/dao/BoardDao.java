@@ -22,4 +22,14 @@ public class BoardDao {
 	public List<Board> selectAll() {
 		return this.list;
 	}
+	
+	// 1.
+	public void delete(Board board) {
+		for (int i = 0; i < this.list.size(); i++) {
+			if (this.list.get(i).equals(board)) {
+				this.list.remove(this.list.get(i));
+				return;
+			}
+		}
+	}
 }
