@@ -32,14 +32,17 @@ public class BoardDao {
 		return this.list;
 	}
 	
-	// 1.
-	public void delete(Board board) {
+	// 1.							// 2.
+	public void delete(Board board) throws BoardException {
 		for (int i = 0; i < this.list.size(); i++) {
 			if (this.list.get(i).equals(board)) {
 				this.list.remove(this.list.get(i));
 				return;
 			}
 		}
+		
+		// 1.
+		throw new BoardException("E02: 삭제할 게시글이 존재하지 않습니다.");
 	}
 	
 	// 1.

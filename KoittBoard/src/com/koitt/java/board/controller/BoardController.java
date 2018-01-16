@@ -115,7 +115,14 @@ public class BoardController {
 		Board board = new Board();
 		board.setId(id);
 		
-		this.service.remove(board);
+		// 4.
+		try {
+			this.service.remove(board);
+			System.out.println(board.getId() + "번의 게시글이 삭제되었습니다.");
+		}
+		catch (BoardException e) {
+			System.out.println(e.getMessage());
+		}
 	}
 	
 	// 3.
