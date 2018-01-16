@@ -63,6 +63,7 @@ public class BoardController {
 					
 				case 5:
 					// 1.
+					System.out.println("안녕히 가세요~");
 					input.close();	// 표준 입출력 종료
 					System.exit(0);	// 0: 정상종료
 					break;
@@ -117,7 +118,16 @@ public class BoardController {
 		System.out.println("=== 게시글 삭제 ===");
 		
 		System.out.print("삭제할 글 번호를 입력하세요: ");
-		Integer id = Integer.parseInt(this.input.nextLine());
+		
+		// 1.
+		Integer id = null;
+		try {
+			id = Integer.parseInt(this.input.nextLine());
+		}
+		catch (NumberFormatException e) {
+			System.out.println("숫자만 입력하세요.");
+			return;
+		}
 		
 		//Board board = new Board(id, null, null, null, null);
 		Board board = new Board();
@@ -138,7 +148,16 @@ public class BoardController {
 		System.out.println("=== 게시글 수정 ===");
 		
 		System.out.print("수정할 글 번호를 입력하세요: ");
-		Integer id = Integer.parseInt(this.input.nextLine());
+		
+		// 1.
+		Integer id = null;
+		try {
+			id = Integer.parseInt(this.input.nextLine());
+		}
+		catch (NumberFormatException e) {
+			System.out.println("숫자만 입력하세요.");
+			return;
+		}
 		
 		System.out.print("글 제목: ");
 		String title = this.input.nextLine();
