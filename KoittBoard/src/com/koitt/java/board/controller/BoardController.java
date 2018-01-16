@@ -53,6 +53,9 @@ public class BoardController {
 					break;
 					
 				case 5:
+					// 1.
+					input.close();	// 표준 입출력 종료
+					System.exit(0);	// 0: 정상종료
 					break;
 					
 				default:
