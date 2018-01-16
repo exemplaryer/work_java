@@ -48,6 +48,8 @@ public class BoardController {
 					break;
 				
 				case 4:
+					// 4.
+					controller.menuModify();
 					break;
 					
 				case 5:
@@ -103,5 +105,27 @@ public class BoardController {
 		board.setId(id);
 		
 		this.service.remove(board);
+	}
+	
+	// 3.
+	public void menuModify() {
+		System.out.println("=== 게시글 수정 ===");
+		
+		System.out.print("수정할 글 번호를 입력하세요: ");
+		Integer id = Integer.parseInt(this.input.nextLine());
+		
+		System.out.print("글 제목: ");
+		String title = this.input.nextLine();
+		
+		System.out.print("글 내용: ");
+		String content = this.input.nextLine();
+		
+		/*
+		 * writer: 변경되지 않기 때문에 null
+		 * regDate: 변경되지 않기 때문에 null
+		 */
+		Board board = new Board(id, title, content, null, null);
+		
+		this.service.modify(board);
 	}
 }

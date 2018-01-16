@@ -32,4 +32,19 @@ public class BoardDao {
 			}
 		}
 	}
+	
+	// 1.
+	public void update(Board board) {
+		for (Board item : this.list) {
+			if (item.equals(board)) {
+				/*
+				 * id: 검색 조건이기 때문에 변경 필요 없음
+				 * writer: 기존 작성한 작성자와 동일하다고 가정해서 변경 필요 없음
+				 * regDate: 글 생성일이기 때문에 일자를 변경 필요 없음
+				 */
+				item.setContent(board.getContent());
+				item.setTitle(board.getTitle());
+			}
+		}
+	}
 }
