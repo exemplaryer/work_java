@@ -6,7 +6,7 @@ class BankAccount {
 	int balance = 0;	// 은행잔고
 	
 	// 인출
-	public void withdraw(int money) {
+	public synchronized void withdraw(int money) {	// withdraw 메소드 전체를 임계영역으로 잡음
 		// 현재 출금하려는 금액보다 잔고가 많은지 검사
 		if (money >= 0 && this.balance >= money) {
 			try {
@@ -26,10 +26,12 @@ class BankAccount {
 	
 	// 입금
 	public void deposit(int money) {
-		if (money > 0) {
-			this.balance += money;
-			System.out.printf("%s가 %d 입금하여 현재잔고 %d입니다. %n", 
-					Thread.currentThread().getName(), money, this.balance);
+		synchronized (this) {	// 중괄호 시작부터 중괄호 끝나는 부분까지 임계영역으로 설정
+			if (money > 0) {
+				this.balance += money;
+				System.out.printf("%s가 %d 입금하여 현재잔고 %d입니다. %n", 
+						Thread.currentThread().getName(), money, this.balance);
+			}
 		}
 	}
 }
@@ -39,7 +41,7 @@ public class SyncTest implements Runnable {
 
 	@Override
 	public void run() {
-		while (true) {
+		for (int i = 0; i < 3; i++) {
 			int amount = new Random().nextInt(10000);	// 0 ~ 10000까지 랜덤숫자를 끄집어 낸다.
 			amount = amount % 10 * 1000;	// 10으로 나눈 나머지이기 때문에 1의 자리값에 1000을 곱한 값
 			System.out.printf("[%s] 금액=%d %n", Thread.currentThread().getName(), amount);
