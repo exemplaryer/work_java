@@ -13,6 +13,7 @@ public class BankAccount {
 	// 6.
 	public void deposit(int money) {
 		this.balance += money;
+		System.out.println("정상 입금처리: 입금금액=" + money + ", 잔금=" + this.balance);
 	}
 	
 	// 7.							// 9.
@@ -25,10 +26,11 @@ public class BankAccount {
 		}
 		// 최저 잔금 이하로 인출을 요청
 		else if (this.balance - money < this.minBalance) {
-			throw new InvalidWithdraw("E02: 최저 잔금 이하로 인출을 요청하였습니다.");
+			throw new InvalidWithdraw("초과출금 요구 예외");
 		}
 		
 		this.balance -= money;
+		System.out.println("정상 출금처리: 인출금액=" + money + ", 잔금=" + this.balance);
 	}
 	
 	
