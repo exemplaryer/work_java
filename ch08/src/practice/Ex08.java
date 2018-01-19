@@ -8,7 +8,16 @@ class Time implements Runnable {
 	public void run() {
 		while (true) {
 			System.out.print(new Date());
-			System.out.print("\b\b\b\b\b\b\b\b\b\b");
+			try {
+				Thread.sleep(500);
+			}
+			catch (Exception e) {
+				System.out.println(e.getMessage());
+			}
+			
+			for (int i = 0; i < 100; i++) {
+				System.out.println();
+			}
 		}
 	}
 	
