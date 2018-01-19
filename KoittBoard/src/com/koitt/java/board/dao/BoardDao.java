@@ -14,7 +14,6 @@ public class BoardDao {
 	public BoardDao() {
 		this.list = new ArrayList<Board>();
 	}
-	
 									// 2.
 	public void insert(Board board) throws BoardException {
 		for (Board item : this.list) {
