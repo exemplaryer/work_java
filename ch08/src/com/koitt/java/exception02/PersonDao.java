@@ -1,5 +1,6 @@
 package com.koitt.java.exception02;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -120,14 +121,25 @@ public class PersonDao {
 		Object list = null;
 		
 		try {
-			fis = new FileInputStream(filename);
-			ois = new ObjectInputStream(fis);
+			File file = new File(filename);	// 해당 파일 객체화
 			
-			// 파일에 있던 리스트 객체를 끄집어내기
-			list = ois.readObject();
-			
-			ois.close();
-			fis.close();
+			// 파일이 존재 할 경우
+			if (file.exists()) {
+				fis = new FileInputStream(filename);
+				ois = new ObjectInputStream(fis);
+
+				// 파일에 있던 리스트 객체를 끄집어내기
+				list = ois.readObject();
+
+				ois.close();
+				fis.close();
+				
+				return (List<Person>) list;
+			}
+			else {
+				System.out.println("처음 방문입니다.");
+				return new ArrayList<Person>();
+			}
 			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -135,9 +147,9 @@ public class PersonDao {
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
-		} finally {
-			return (List<Person>) list;
 		}
+		
+		return null;
 	}
 	
 }
