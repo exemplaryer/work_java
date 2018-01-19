@@ -14,7 +14,7 @@ public class BoardService {
 	
 	public BoardService() {
 		this.dao = new BoardDao();
-		this.count = 0;	// 0으로 초기화
+		this.count = this.dao.lastBoardId();	// 0으로 초기화
 	}
 	
 								// 3.
