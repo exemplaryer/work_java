@@ -85,6 +85,12 @@ public class BoardDao {
 	}
 	
 	public Integer lastBoardId() {
-		return list.get(list.size() - 1).getId();
+		int size = list.size();
+		if (size == 0) {
+			return 0;
+		}
+		else {
+			return list.get(size - 1).getId();
+		}
 	}
 }
