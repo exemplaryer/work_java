@@ -81,7 +81,8 @@ public class ChatServerTestDrive {
 				} catch (ClassNotFoundException e) {
 					e.printStackTrace();
 				} catch (IOException e) {
-					e.printStackTrace();
+					// 누군가 사용자 한명이 퇴실하면 IOException이 발생
+					removeClient(ois);
 				}
 			}
 		}
@@ -94,6 +95,28 @@ public class ChatServerTestDrive {
 				userList.get(i).getOos().writeObject(msg);
 			} catch (IOException e) {
 				e.printStackTrace();
+			}
+		}
+	}
+	
+	// 사용자 퇴실처리
+	public void removeClient(ObjectInputStream ois) {
+		// 사용자 목록 전체를 검색해서 인자로 받은 ois와 같은 사용자가 있는지 검사
+		for (User user : userList) {
+			ObjectInputStream in = user.getOis();
+			if (in.equals(ois)) {
+				try {
+					user.getOis().close();
+					user.getOos().close();
+					user.getSocket().close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				
+				userList.remove(user);
+				broadcast("사용자가 나갔습니다.");
+				System.out.println("사용자가 나갔습니다.");
+				break;
 			}
 		}
 	}
