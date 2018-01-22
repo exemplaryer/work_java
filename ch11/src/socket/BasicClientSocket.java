@@ -12,7 +12,7 @@ public class BasicClientSocket {
 	public static void main(String[] args) {
 		try {
 			// 서버 주소와 포트번호를 지정하여 서버에 접속
-			Socket mySocket = new Socket("127.0.0.1", 7070);
+			Socket mySocket = new Socket("192.168.0.11", 7070);
 			System.out.println(">> 서버 접속에 성공했습니다.");
 			
 			// 서버 소켓에 스트림을 연결

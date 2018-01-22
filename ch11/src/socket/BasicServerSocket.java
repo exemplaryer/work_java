@@ -31,7 +31,7 @@ public class BasicServerSocket {
 			// 클라이언트 소켓에 메시지 전송
 			String msg = "서버에 접속하신 것을 환영합니다!";
 			out.println(msg);
-			out.flush();
+			//out.flush();
 			System.out.println("[서버] " + msg);
 			mySocket.close();
 			
