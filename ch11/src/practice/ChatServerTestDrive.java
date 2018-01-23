@@ -76,6 +76,10 @@ public class ChatServerTestDrive {
 						String msg = (String) obj;
 						System.out.println(msg);
 						broadcast(msg);
+						
+						if (msg.equals("quit")) {
+							System.exit(0);
+						}
 					}
 					
 				} catch (ClassNotFoundException e) {

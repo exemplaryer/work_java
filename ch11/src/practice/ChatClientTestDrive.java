@@ -25,6 +25,11 @@ public class ChatClientTestDrive {
 					if (obj instanceof String) {
 						String serverMsg = (String) obj;
 						System.out.println(serverMsg);
+						
+						// contains 메소드: serverMsg 문자열 중 quit이 포함된 경우 true를 리턴
+						if (serverMsg.contains("quit")) {
+							System.exit(0);
+						}
 					}
 					
 				} catch (ClassNotFoundException e) {
@@ -49,6 +54,12 @@ public class ChatClientTestDrive {
 				String msg = "[" + name + "] " + this.input.nextLine();
 				try {
 					oos.writeObject(msg);
+					switch (msg) {
+						case "quit":
+							System.exit(0);
+							break;
+					}
+					
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
@@ -79,8 +90,28 @@ public class ChatClientTestDrive {
 	
 	public static void main(String[] args) {
 		try {
-			String name = InetAddress.getLocalHost().getHostAddress();	// 클라이언트의 IP
-			new ChatClientTestDrive().go("192.168.0.11", 7070, name);
+			//String name = InetAddress.getLocalHost().getHostAddress();	// 클라이언트의 IP
+			Scanner input = new Scanner(System.in);
+			System.out.print("클라이언트의 이름을 입력하세요 >> ");
+			String name = input.nextLine();
+			System.out.print("서버의 IP 주소를 입력하세요 >> ");
+			String ip = input.nextLine();
+			
+			System.out.println("=== 채팅 프로그램 ===");
+			System.out.println("connect: 서버에 접속하기");
+			System.out.println("bye: 클라이언트만 종료");
+			System.out.print("명령문을 입력하세요 >> ");
+			String menu = input.nextLine();
+			
+			switch (menu) {
+				case "connect":
+					new ChatClientTestDrive().go(ip, 7070, name);
+					break;
+					
+				case "bye":
+					System.exit(0);
+					break;
+			}
 			
 		} catch (UnknownHostException e) {
 			System.out.println("올바른 서버 IP주소를 입력하세요.");
