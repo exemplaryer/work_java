@@ -53,12 +53,23 @@ public class ChatClientTestDrive {
 			while (true) {
 				String msg = "[" + name + "] " + this.input.nextLine();
 				try {
-					oos.writeObject(msg);
-					switch (msg) {
+					// 예) [홍길동] quit -> msg.split[0] = "[홍길동]", msg.split[1] = "quit"
+					String temp = msg.split(" ")[1];
+					switch (temp) {
 						case "quit":
-							System.exit(0);
+							System.out.print("정말로 종료하시겠습니까? (y/n) >> ");
+							String yesOrNo = this.input.nextLine();
+							if (yesOrNo.equals("y")) {
+								System.out.println("종료!");
+								System.exit(0);
+							}
+							else if (yesOrNo.equals("n")) {
+								System.out.println("종료가 취소되었습니다.");
+								continue;
+							}
 							break;
 					}
+					oos.writeObject(msg);
 					
 				} catch (IOException e) {
 					e.printStackTrace();
