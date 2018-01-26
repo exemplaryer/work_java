@@ -1,5 +1,6 @@
 package com.koitt.java.board.service;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -42,7 +43,7 @@ public class BoardService {
 	}
 	
 	// 2.
-	public List<Board> read() {
+	public List<Board> read() throws SQLException {
 		return dao.selectAll();
 	}
 	

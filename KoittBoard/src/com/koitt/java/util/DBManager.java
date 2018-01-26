@@ -40,8 +40,8 @@ public class DBManager {
 	}
 	//////////////////////////////////////////////////////
 	
-	public List<Board> selectAll() throws ClassNotFoundException, SQLException {
-		conn = DriverManager.getConnection(URL, ID, PASSWORD);
+	public List<Board> selectAll() throws SQLException {
+		conn = DriverManager.getConnection(URL + "/" + DB_NAME, ID, PASSWORD);
 		String sql = "SELECT * FROM board";
 		pstmt = conn.prepareStatement(sql);
 		rs = pstmt.executeQuery();

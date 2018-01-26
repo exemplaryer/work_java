@@ -1,9 +1,11 @@
 package com.koitt.java.board.dao;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import com.koitt.java.board.exception.BoardException;
 import com.koitt.java.board.model.Board;
+import com.koitt.java.util.DBManager;
 import com.koitt.java.util.FileManager;
 
 public class BoardDao {
@@ -32,8 +34,8 @@ public class BoardDao {
 	}
 	
 	// 1.
-	public List<Board> selectAll() {
-		return this.list;
+	public List<Board> selectAll() throws SQLException {
+		return DBManager.getInstance().selectAll();
 	}
 	
 	// 1.							// 2.
