@@ -99,9 +99,11 @@ public class BoardController {
 			// 생성한 객체를 service로 전달한다.
 			this.service.add(board);
 			System.out.println("입력완료!");
-		}
-		catch (BoardException e) {
+			
+		} catch (BoardException e) {
 			System.out.println(e.getMessage());
+		} catch (SQLException e) {
+			System.out.println("insert() SQL문 오류");
 		}
 	}
 	

@@ -20,7 +20,7 @@ public class BoardDao {
 		this.list = FileManager.loadFromFile(BoardDao.FILE_NAME);
 	}
 									// 2.
-	public void insert(Board board) throws BoardException {
+	public void insert(Board board) throws BoardException, SQLException {
 		for (Board item : this.list) {
 			if (item.equals(board)) {
 				// 1. 기존 등록된 같은 번호의 게시글이 존재할 경우
@@ -30,7 +30,8 @@ public class BoardDao {
 		
 		list.add(board);
 		// TODO 3. saveToFile(list, [파일명]);
-		FileManager.saveToFile(this.list, BoardDao.FILE_NAME);
+		//FileManager.saveToFile(this.list, BoardDao.FILE_NAME);
+		DBManager.getInstance().insert(board);
 	}
 	
 	// 1.
