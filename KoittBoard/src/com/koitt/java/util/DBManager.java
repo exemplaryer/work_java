@@ -85,6 +85,26 @@ public class DBManager {
 		this.close();
 	}
 	
+	public void delete(Board board) throws SQLException {
+		// 1. 데이터베이스와 연결
+		conn = DriverManager.getConnection(URL + "/" + DB_NAME, ID, PASSWORD);
+		
+		// 2. SQL문 작성
+		String sql = "DELETE FROM board WHERE no = ?";
+		
+		// 3. SQL문 실행을 위한 객체 생성
+		pstmt = conn.prepareStatement(sql);
+		
+		// 4. SQL문의 물음표 채우기
+		pstmt.setInt(1, board.getId());
+		
+		// 5. 채운 SQL문 실행
+		pstmt.executeUpdate();
+		
+		// 6. 객체 연결 해제하는 메소드 호출
+		this.close();
+	}
+	
 	// 객체 연결 해제
 	private void close() throws SQLException {
 		if (rs != null) { rs.close(); }

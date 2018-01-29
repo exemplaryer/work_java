@@ -28,7 +28,7 @@ public class BoardService {
 		return dao.selectAll();
 	}
 	
-	public void remove(Board board) throws BoardException {
+	public void remove(Board board) throws BoardException, SQLException {
 		dao.delete(board);
 	}
 	
@@ -37,7 +37,7 @@ public class BoardService {
 		dao.update(board);
 	}
 	
-	public boolean isExist(Board board) {
+	public boolean isExist(Board board) throws SQLException {
 		return dao.isExist(board);
 	}
 }
