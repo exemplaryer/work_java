@@ -32,7 +32,7 @@ public class BoardService {
 		dao.delete(board);
 	}
 	
-	public void modify(Board board) throws BoardException {
+	public void modify(Board board) throws BoardException, SQLException {
 		board.setModiDate(new Date());
 		dao.update(board);
 	}

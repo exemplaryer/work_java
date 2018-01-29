@@ -34,9 +34,18 @@ public class BoardDao {
 		}
 	}
 
-	public void update(Board board) throws BoardException {
-
-		throw new BoardException("E03: 수정할 게시글이 존재하지 않습니다.");
+	public void update(Board board) throws BoardException, SQLException {
+		// 1. 글 존재하는지 여부 체크
+		boolean exist = isExist(board);
+		
+		// 2. 존재한다면 수정
+		if (exist) {
+			DBManager.getInstance().update(board);
+		}
+		// 3. 존재하지 않는다면 예외발생
+		else {
+			throw new BoardException("E03: 수정할 게시글이 존재하지 않습니다.");
+		}
 	}
 
 	// 1. 해당 글이 존재하는지 여부 확인 메소드
