@@ -2,7 +2,7 @@ class OperatorEx06 {
       public static void main(String[] args) { 
             byte a = 10; 
             byte b = 20; 
-            //byte c = a + b;	// ÄÄÆÄÀÏ ¿¡·¯°¡ ¹ß»ıÇÑ´Ù. ¸í½ÃÀûÀ¸·Î Çüº¯È¯ÀÌ ÇÊ¿äÇÏ´Ù.
+            //byte c = a + b;	// ì»´íŒŒì¼ ì—ëŸ¬ê°€ ë°œìƒí•œë‹¤. ëª…ì‹œì ìœ¼ë¡œ í˜•ë³€í™˜ì´ í•„ìš”í•˜ë‹¤.
             byte c = (byte)(a + b);
 
             System.out.println(c); 

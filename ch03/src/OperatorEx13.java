@@ -2,8 +2,8 @@ class OperatorEx13 {
       public static void main(String[] args) { 
 			char c1 = 'a';
 
-//			char c2 =  c1+1;           // ¶óÀÎ 5 : ÄÄÆÄÀÏ ¿¡·¯¹ß»ı!!!
-			char c2 = 'a'+1;           // ¶óÀÎ 6 : ÄÄÆÄÀÏ ¿¡·¯¾øÀ½
+//			char c2 =  c1+1;           // ë¼ì¸ 5 : ì»´íŒŒì¼ ì—ëŸ¬ë°œìƒ!!!
+			char c2 = 'a'+1;           // ë¼ì¸ 6 : ì»´íŒŒì¼ ì—ëŸ¬ì—†ìŒ
 
             System.out.println(c2); 
       } 

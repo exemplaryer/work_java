@@ -15,5 +15,5 @@ class OperatorEx31 {
 
 		hex = hex >> 4;
 		System.out.printf("%X%n", hex & mask);
-	} // mainÀÇ ³¡
+	} // mainì˜ ë
 }

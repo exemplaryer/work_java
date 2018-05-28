@@ -24,9 +24,9 @@ class OperatorEx30 {
 		dec = 8;
 		System.out.printf("%d >> %2d = %4d \t%s%n", dec, 0,  dec >> 0,  toBinaryString(dec << 2));
 		System.out.printf("%d >> %2d = %4d \t%s%n", dec, 32, dec >> 32, toBinaryString(dec << 2));
-	} // mainÀÇ ³¡
+	} // mainì˜ ë
 
-	// 10Áø Á¤¼ö¸¦ 2Áø¼ö·Î º¯È¯ÇÏ´Â ¸Þ¼­µå
+	// 10ì§„ ì •ìˆ˜ë¥¼ 2ì§„ìˆ˜ë¡œ ë³€í™˜í•˜ëŠ” ë©”ì„œë“œ
 	static String toBinaryString(int x) {
 		String zero = "00000000000000000000000000000000";
 		String tmp = zero + Integer.toBinaryString(x);
