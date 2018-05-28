@@ -12,12 +12,12 @@ class PrintfEx2 {
 		System.out.printf("f3=%f, %e, %g%n", f3, f3, f3);
 
 		System.out.printf("d=%f%n", d);
-		System.out.printf("d=%14.10f%n", d); // ÀüÃ¼ 14ÀÚ¸® Áß ¼Ò¼öÁ¡ 10ÀÚ¸®
+		System.out.printf("d=%14.10f%n", d); // ì „ì²´ 14ìë¦¬ ì¤‘ ì†Œìˆ˜ì  10ìë¦¬
 
 		System.out.printf("[12345678901234567890]%n");
 		System.out.printf("[%s]%n", url);
 		System.out.printf("[%20s]%n", url);
-		System.out.printf("[%-20s]%n", url); // ¿À¸¥ÂÊ Á¤·Ä
-		System.out.printf("[%.8s]%n", url);  // ¿ŞÂÊ¿¡¼­ 8±ÛÀÚ¸¸ Ãâ·Â
+		System.out.printf("[%-20s]%n", url); // ì˜¤ë¥¸ìª½ ì •ë ¬
+		System.out.printf("[%.8s]%n", url);  // ì™¼ìª½ì—ì„œ 8ê¸€ìë§Œ ì¶œë ¥
 	}
 }

@@ -4,6 +4,6 @@ class FloatToBinEx {
 		int i = Float.floatToIntBits(f);
 
 		System.out.printf("%f%n", f);
-		System.out.printf("%X%n", i); // 16Áø¼ö·Î Ãâ·Â
-	} // mainÀÇ ³¡
+		System.out.printf("%X%n", i); // 16ì§„ìˆ˜ë¡œ ì¶œë ¥
+	} // mainì˜ ë
 }
