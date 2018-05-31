@@ -50,6 +50,11 @@ public class Ex1003 {
 		Scanner scanner = new Scanner(System.in);
 		
 		int n = Integer.parseInt(scanner.nextLine());
+		if (n > 100) {
+			System.out.println("INPUT ERROR!");
+			return;
+		}
+		
 		String[] numbers = scanner.nextLine().split(" ");
 		
 		int[] seq = new int[1];

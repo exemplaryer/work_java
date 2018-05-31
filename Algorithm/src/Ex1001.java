@@ -34,7 +34,7 @@ public class Ex1001 {
 
 			// 0 0을 입력 받았을 경우
 			if (num == 0 && legs == 0) {
-				System.exit(0);	// 정상종료
+				return;
 			}
 			
 			// 입력 값이 범위를 벗어난 경우

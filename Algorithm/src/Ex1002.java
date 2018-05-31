@@ -31,7 +31,7 @@ public class Ex1002 {
 		int n = Integer.parseInt(scanner.nextLine());
 		if (!(2 <= n && n <= 10000)) {
 			System.out.println("INPUT ERROR!");
-			System.exit(0);
+			return;
 		}
 
 		String[] numbers = scanner.nextLine().split(" ");
