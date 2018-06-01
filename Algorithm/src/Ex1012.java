@@ -25,30 +25,47 @@ import java.util.Scanner;
 public class Ex1012 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		
+
 		String[] input = scanner.nextLine().split(" ");
 		int t = Integer.parseInt(input[0]);
 		int n = Integer.parseInt(input[1]);
-		
+
 		boolean isError01 = !(0 <= t && t <= 200);
 		boolean isError02 = !(0 <= n && n <= 10000);
 		if (isError01 || isError02) {
 			System.out.println("INPUT ERROR!");
 			return;
 		}
-		
+
 		String[][] scoreBoard = new String[t][2];
 		for (int i = 0; i < t; i++) {
 			String[] teamScore = scanner.nextLine().split(" ");
 			scoreBoard[i] = teamScore;
 		}
-		
+
+		// 총점 구하기
 		int sum = 0;
 		for (int i = 0; i < t; i++) {
 			sum += Integer.parseInt(scoreBoard[i][1]);
 		}
+
+		// 총점에서 최대 승수 구하기
+		int win = sum / 3;
 		
-		int draw = n - (sum % n);
-		System.out.println(draw);
+		/*
+		 *  총점에서 승수만큼 점수를 뺀 다음 
+		 *  남은 점수로 가능한 무승부 수를 구해
+		 *  승수와 무승부 수를 더해서 총 경기 수와 같을 때까지
+		 *  승수를 점점 줄이면서 무승부 수를 구한다.
+		 */
+		int draw = 0;
+		for (int i = win; i >= 0; i--) {
+			draw = (sum - i * 3) / 2;
+			if (n == (i + draw)) {
+				System.out.println(draw);
+				return;
+			}
+		}
+		System.out.println(0);
 	}
 }
