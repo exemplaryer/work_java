@@ -47,7 +47,7 @@ public class Ex1004 {
 		
 		// 도시락 가격을 배열에 저장하고, 합계 구하기
 		double[] prices = new double[n];
-		int sum = 0;
+		double sum = 0;
 		for (int i = 0; i < n; i++) {
 			int price = Integer.parseInt(scanner.nextLine());
 			if (1000 <= price && price <= 4000) {
@@ -72,7 +72,7 @@ public class Ex1004 {
 		// 표준편차(Standard Deviation)
 		double stdDev = Math.sqrt(sumOfSquare / n);
 		
-		System.out.printf("%d%n", sum);
+		System.out.printf("%d%n", (int)sum);
 		printNum(avg);
 		printNum(stdDev);
 	}

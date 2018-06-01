@@ -61,20 +61,12 @@ public class Ex1011 {
 		 *  5 % 3 = 2    ---    1번 학생
 		 *  ...
 		 *  
-		 *  clap 배열의 인덱스 번호와 맞춰주기 위해 원래 나눌 수에 +2씩 한다.
-		 *  (1 + 2) % 3 = 0    ---    0번 학생
-		 *  (2 + 2) % 3 = 1    ---    1번 학생
-		 *  (3 + 2) % 3 = 2    ---    2번 학생
-		 *  (4 + 2) % 3 = 0    ---    0번 학생
-		 *  (5 + 2) % 3 = 1    ---    1번 학생
-		 *  ...
-		 *  
 		 *  for문을 돌면서 소수일 때의 clap 배열 인덱스 번호를 구해
 		 *  해당 인덱스에 숫자를 증가시키면 된다.
 		 */
 		for (int i = 0; i < strPrimes.length; i++) {
 			int prime = Integer.parseInt(strPrimes[i]);
-			int index = (prime + 2) % n;
+			int index = prime % n == 0 ? n - 1 : prime % n - 1;
 			clap[index]++;
 		}
 		
@@ -108,7 +100,6 @@ public class Ex1011 {
 			
 			i++;
 		}
-		
 		return result;
 	}
 }

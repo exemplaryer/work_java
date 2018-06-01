@@ -19,7 +19,7 @@ import java.util.Scanner;
  * 금요일 Friday 
  * 토요일 Saturday
  * 
- * 입력 형식: 해당하는 년 y(y 는 2,000 이상 2,018 이하의 정수), 월 m(m은 1부터 12사이의 정수), 일 d(d는 해당 월 사이의 수)을 
+ * 입력 형식: 해당하는 년 y(y 는 2,000 이상 2,010 이하의 정수), 월 m(m은 1부터 12사이의 정수), 일 d(d는 해당 월 사이의 수)을 
  * 공백으로 구분하여 입력받는다.
  * 하나의 결과가 출력되면 프로그램을 종료한다.
  * 데이터의 크기가 주어진 범위를 벗어날 경우는 "INPUT ERROR!"를 출력하고 다시 입력받는다.
@@ -59,14 +59,17 @@ public class Ex1007 {
 		int m = Integer.parseInt(date[1]);
 		int d = Integer.parseInt(date[2]);
 
-		if (!(2000 <= y && y <= 2018)) {
+		if (!(2000 <= y && y <= 2010)) {
 			System.out.println("INPUT ERROR!");
+			return;
 		}
 		else if (!(1 <= m && m <= 12)) {
 			System.out.println("INPUT ERROR!");
+			return;
 		}
 		else if (!(1 <= d && d <= getMaxDay(y, m))) {
 			System.out.println("INPUT ERROR!");
+			return;
 		}
 		int dayOfWeek = getDayOfWeek(y, m, 1);	// 해당 년, 월의 1일에 해당하는 요일 구하기
 
@@ -98,13 +101,12 @@ public class Ex1007 {
 	// 해당 년, 월의 마지막 일을 리턴
 	private static int getMaxDay(int year, int month) {
 		boolean isLeapYear = false;
-
-		// 1) 400의 배수는 모두 윤년이다.
-		if (year % 400 == 0) {
-			isLeapYear = true;
-		}
-		// 2) 4의 배수이며 100의 배수가 아니면 윤년이다.
-		else if ((year % 4 == 0) && (year % 100 != 0)) {
+		
+		boolean cond01 = year % 4 == 0;
+		boolean cond02 = year % 100 != 0;
+		boolean cond03 = year % 400 == 0;
+		
+		if (cond01 && cond02 || cond03) {
 			isLeapYear = true;
 		}
 
@@ -115,11 +117,17 @@ public class Ex1007 {
 	// 해당 년, 월, 일이 2000년 1월 1일 기준으로 일주일에서 몇번째 날인지 리턴
 	private static int getSumOfDay(int year, int month, int day) {
 		int sumOfDay = 0;
-		for (int i = 2000; i <= year; i++) {
-			for (int j = 1; j < month; j++) {
+		
+		for (int i = 2000; i < year; i++) {
+			for (int j = 1; j <= 12; j++) {
 				sumOfDay += getMaxDay(i, j);
 			}
 		}
+		
+		for (int j = 1; j < month; j++) {
+			sumOfDay += getMaxDay(year, j);
+		}
+		
 		sumOfDay += day;
 		return sumOfDay;
 	}

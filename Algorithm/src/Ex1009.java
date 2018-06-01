@@ -32,14 +32,15 @@ public class Ex1009 {
 			}
 
 			int[] numbers = new int[input.length()];
+			String reverse = "";
 			int sum = 0;
 
 			for (int i = 0, cursor = input.length() - 1; i < numbers.length; i++, cursor--) {
 				numbers[i] = Character.getNumericValue(input.charAt(cursor));
 				sum += numbers[i];
-				System.out.print(numbers[i]);
+				reverse += numbers[i];
 			}
-			System.out.printf(" %d%n", sum);
+			System.out.printf("%d %d%n", Integer.parseInt(reverse), sum);
 		}
 	}
 }

@@ -46,13 +46,19 @@ public class Ex1001 {
 				System.out.printf("%d%n", 0);
 			}
 			else {
+				boolean isDetected = false;
 				for (int chicks = 0; chicks <= num; chicks++) {
 					int dogs = num - chicks;
 					int sumOfLegs = dogs * 4 + chicks * 2;
 					if (sumOfLegs == legs) {
+						isDetected = true;
 						System.out.printf("%d %d%n", dogs, chicks);
 						break;
 					}
+				}
+				
+				if (isDetected == false) {
+					System.out.println("0");
 				}
 			}
 		}
