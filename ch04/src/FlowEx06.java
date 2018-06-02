@@ -4,27 +4,27 @@ class FlowEx06 {
 	public static void main(String[] args) { 
 		int month = 0;
 
-		System.out.print("ÇöÀç ¿ùÀ» ÀÔ·ÂÇÏ¼¼¿ä.>");
+		System.out.print("í˜„ì¬ ì›”ì„ ì…ë ¥í•˜ì„¸ìš”.>");
 
 		Scanner scanner = new Scanner(System.in);
-		String tmp = scanner.nextLine(); // È­¸éÀ» ÅëÇØ ÀÔ·Â¹ŞÀº ³»¿ëÀ» tmp¿¡ ÀúÀå
-		month = Integer.parseInt(tmp);   // ÀÔ·Â¹ŞÀº ¹®ÀÚ¿­(tmp)À» ¼ıÀÚ·Î º¯È¯
+		String tmp = scanner.nextLine(); // í™”ë©´ì„ í†µí•´ ì…ë ¥ë°›ì€ ë‚´ìš©ì„ tmpì— ì €ì¥
+		month = Integer.parseInt(tmp);   // ì…ë ¥ë°›ì€ ë¬¸ìì—´(tmp)ì„ ìˆ«ìë¡œ ë³€í™˜
 
 		switch(month) {
 			case 3: 
 			case 4: 
 			case 5:
-				System.out.println("ÇöÀçÀÇ °èÀıÀº º½ÀÔ´Ï´Ù.");
+				System.out.println("í˜„ì¬ì˜ ê³„ì ˆì€ ë´„ì…ë‹ˆë‹¤.");
 				break;
 			case 6: case 7: case 8:
-				System.out.println("ÇöÀçÀÇ °èÀıÀº ¿©¸§ÀÔ´Ï´Ù.");
+				System.out.println("í˜„ì¬ì˜ ê³„ì ˆì€ ì—¬ë¦„ì…ë‹ˆë‹¤.");
 				break;
 			case 9: case 10: case 11:
-				System.out.println("ÇöÀçÀÇ °èÀıÀº °¡À»ÀÔ´Ï´Ù.");
+				System.out.println("í˜„ì¬ì˜ ê³„ì ˆì€ ê°€ì„ì…ë‹ˆë‹¤.");
 				break;
 			default:
 	//		case 12:	case 1: case 2:
-				System.out.println("ÇöÀçÀÇ °èÀıÀº °Ü¿ïÀÔ´Ï´Ù.");
+				System.out.println("í˜„ì¬ì˜ ê³„ì ˆì€ ê²¨ìš¸ì…ë‹ˆë‹¤.");
 		}
-	} // mainÀÇ ³¡
+	} // mainì˜ ë
 }

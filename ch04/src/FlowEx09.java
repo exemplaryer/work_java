@@ -5,11 +5,11 @@ class FlowEx09 {
 		int score  = 0;
 		char grade = ' ';
 
-		System.out.print("´ç½ÅÀÇ Á¡¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.(1~100)>");
+		System.out.print("ë‹¹ì‹ ì˜ ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”.(1~100)>");
 
 		Scanner scanner = new Scanner(System.in);
-		String tmp = scanner.nextLine(); // È­¸éÀ» ÅëÇØ ÀÔ·Â¹ŞÀº ³»¿ëÀ» tmp¿¡ ÀúÀå
-		score = Integer.parseInt(tmp);   // ÀÔ·Â¹ŞÀº ¹®ÀÚ¿­(tmp)¸¦ ¼ıÀÚ·Î º¯È¯
+		String tmp = scanner.nextLine(); // í™”ë©´ì„ í†µí•´ ì…ë ¥ë°›ì€ ë‚´ìš©ì„ tmpì— ì €ì¥
+		score = Integer.parseInt(tmp);   // ì…ë ¥ë°›ì€ ë¬¸ìì—´(tmp)ë¥¼ ìˆ«ìë¡œ ë³€í™˜
 
 		switch(score) {
 			case 100: case 99: case 98: case 97: case 96:
@@ -31,6 +31,6 @@ class FlowEx09 {
 				grade = 'F';
 		} // end of switch
 
-		System.out.println("´ç½ÅÀÇ ÇĞÁ¡Àº "+ grade +"ÀÔ´Ï´Ù.");
-	} // mainÀÇ ³¡
+		System.out.println("ë‹¹ì‹ ì˜ í•™ì ì€ "+ grade +"ì…ë‹ˆë‹¤.");
+	} // mainì˜ ë
 }
