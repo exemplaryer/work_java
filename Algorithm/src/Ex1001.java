@@ -46,7 +46,8 @@ public class Ex1001 {
 				System.out.printf("%d%n", 0);
 			}
 			else {
-				boolean isDetected = false;
+				// [방법 1] 병아리 수를 0부터 입력받은 강아지와 병아리의 합까지 1씩 증가시키면서 구하기
+				/*boolean isDetected = false;
 				for (int chicks = 0; chicks <= num; chicks++) {
 					int dogs = num - chicks;
 					int sumOfLegs = dogs * 4 + chicks * 2;
@@ -58,6 +59,35 @@ public class Ex1001 {
 				}
 				
 				if (isDetected == false) {
+					System.out.println("0");
+				}*/
+				
+				/*
+				 *  [방법 2] 수식을 이용하여 구하는 방법
+				 *  
+				 *  num : 강아지와 병아리의 합
+				 *  legs : 강아지와 병아리의 다리 수
+				 *  x : 강아지 수
+				 *  y : 병아리 수
+				 *  
+				 *  num = x + y;			--- 1번식
+				 *  legs = 4 * x + 2 * y;	--- 2번식
+				 *  
+				 *  1번식과 2번식을 이용하여 다음과 같이 강아지 수를 구하는 수식을 얻을 수 있다.
+				 *  x = (legs - 2 * num) / 2;
+				 *  
+				 *  병아리 수는 강아지와 병아리의 합에서 강아지 수를 빼면 된다.
+				 *  y = num - x;
+				 *  
+				 */
+				int dogs = (legs - 2 * num) / 2;
+				int chicks = num - dogs;
+				int sumOfLegs = dogs * 4 + chicks * 2;	// 검산을 위해 강아지와 병아리의 다리 수 구하기
+				
+				if (dogs >= 0 && chicks >= 0 && sumOfLegs == legs) {
+					System.out.printf("%d %d%n", dogs, chicks);
+				}
+				else {
 					System.out.println("0");
 				}
 			}
