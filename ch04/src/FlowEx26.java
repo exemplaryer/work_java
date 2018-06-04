@@ -3,8 +3,8 @@ class FlowEx26 {
 		int sum = 0;
 		int i   = 0;
 
-		while((sum += ++i) <= 100) { // i¸¦ 1¾¿ Áõ°¡½ÃÄÑ¼­ sum¿¡ °è¼Ó ´õÇØ³ª°£´Ù.
+		while((sum += ++i) <= 100) { // ië¥¼ 1ì”© ì¦ê°€ì‹œì¼œì„œ sumì— ê³„ì† ë”í•´ë‚˜ê°„ë‹¤.
 			System.out.printf("%d - %d%n", i, sum);
 		}
-	} // mainÀÇ ³¡
+	} // mainì˜ ë
 }

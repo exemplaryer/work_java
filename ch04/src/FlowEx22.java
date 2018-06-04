@@ -14,5 +14,5 @@ class FlowEx22 {
 		}
 		System.out.println();		
 		System.out.println("sum="+sum);
-	} // mainÀÇ ³¡
+	} // mainì˜ ë
 }

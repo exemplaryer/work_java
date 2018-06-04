@@ -4,11 +4,11 @@ class FlowEx17 {
 	public static void main(String[] args) { 
 		int num = 0;
 
-		System.out.print("*À» Ãâ·ÂÇÒ ¶óÀÎÀÇ ¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.>");
+		System.out.print("*ì„ ì¶œë ¥í•  ë¼ì¸ì˜ ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”.>");
 
 		Scanner scanner = new Scanner(System.in);
-		String tmp = scanner.nextLine();  // È­¸éÀ» ÅëÇØ ÀÔ·Â¹ŞÀº ³»¿ëÀ» tmp¿¡ ÀúÀå
-		num = Integer.parseInt(tmp);      // ÀÔ·Â¹ŞÀº ¹®ÀÚ¿­(tmp)À» ¼ıÀÚ·Î º¯È¯
+		String tmp = scanner.nextLine();  // í™”ë©´ì„ í†µí•´ ì…ë ¥ë°›ì€ ë‚´ìš©ì„ tmpì— ì €ì¥
+		num = Integer.parseInt(tmp);      // ì…ë ¥ë°›ì€ ë¬¸ìì—´(tmp)ì„ ìˆ«ìë¡œ ë³€í™˜
 
 		for(int i=0;i<num;i++) {
 			for(int j=0;j<=i;j++) {
@@ -16,5 +16,5 @@ class FlowEx17 {
 			}
 			System.out.println();
 		}
-	} // mainÀÇ ³¡
+	} // mainì˜ ë
 }

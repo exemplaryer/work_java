@@ -6,9 +6,9 @@ class FlowEx29 {
 			int tmp = i;
 
 			do {
-				if(tmp%10%3==0 && tmp%10!=0) // tmp%10ÀÌ 3ÀÇ ¹è¼öÀÎÁö È®ÀÎ(0 Á¦¿Ü)
-					System.out.print("Â¦");
-			} while((tmp/=10)!=0);  // tmp /= 10Àº tmp = tmp / 10°ú µ¿ÀÏ
+				if(tmp%10%3==0 && tmp%10!=0) // tmp%10ì´ 3ì˜ ë°°ìˆ˜ì¸ì§€ í™•ì¸(0 ì œì™¸)
+					System.out.print("ì§");
+			} while((tmp/=10)!=0);  // tmp /= 10ì€ tmp = tmp / 10ê³¼ ë™ì¼
 
 			System.out.println();
 		}

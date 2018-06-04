@@ -1,7 +1,7 @@
 class FlowEx33 {
 	public static void main(String[] args)
 	{
-        // for¹®¿¡ Loop1ÀÌ¶ó´Â ÀÌ¸§À» ºÙ¿´´Ù.
+        // forë¬¸ì— Loop1ì´ë¼ëŠ” ì´ë¦„ì„ ë¶™ì˜€ë‹¤.
 		Loop1 : for(int i=2;i <=9;i++) {	
 				for(int j=1;j <=9;j++) {
 					if(j==5)

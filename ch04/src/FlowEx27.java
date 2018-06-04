@@ -4,11 +4,11 @@ class FlowEx27 {
 	public static void main(String[] args) { 
 		int num;
 		int sum = 0;
-		boolean flag = true;   // while¹®ÀÇ Á¶°Ç½ÄÀ¸·Î »ç¿ëµÉ º¯¼ö
+		boolean flag = true;   // whileë¬¸ì˜ ì¡°ê±´ì‹ìœ¼ë¡œ ì‚¬ìš©ë  ë³€ìˆ˜
 
-		System.out.println("ÇÕ°è¸¦ ±¸ÇÒ ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.(²ø³»·Á¸é 0À» ÀÔ·Â)");
+		System.out.println("í•©ê³„ë¥¼ êµ¬í•  ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”.(ëŒë‚´ë ¤ë©´ 0ì„ ì…ë ¥)");
 
-		while(flag) {    // flagÀÇ °ªÀÌ trueÀÌ¹Ç·Î Á¶°Ç½ÄÀº ÂüÀÌ µÈ´Ù.
+		while(flag) {    // flagì˜ ê°’ì´ trueì´ë¯€ë¡œ ì¡°ê±´ì‹ì€ ì°¸ì´ ëœë‹¤.
 			System.out.print(">>");
 
 			Scanner scanner = new Scanner(System.in);
@@ -16,12 +16,12 @@ class FlowEx27 {
 			num = Integer.parseInt(tmp);  
 
 			if(num!=0) {  
-				sum += num; // numÀÌ 0ÀÌ ¾Æ´Ï¸é, sum¿¡ ´õÇÑ´Ù.
+				sum += num; // numì´ 0ì´ ì•„ë‹ˆë©´, sumì— ë”í•œë‹¤.
 			} else {
-				flag = false;   // numÀÌ 0ÀÌ¸é, flagÀÇ °ªÀ» false·Î º¯°æ.
+				flag = false;   // numì´ 0ì´ë©´, flagì˜ ê°’ì„ falseë¡œ ë³€ê²½.
 			}
-		} // while¹®ÀÇ ³¡
+		} // whileë¬¸ì˜ ë
 
-		System.out.println("ÇÕ°è:"+ sum);
+		System.out.println("í•©ê³„:"+ sum);
 	}
 }
