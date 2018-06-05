@@ -1,5 +1,5 @@
 
-public class Ex00 {
+public class FlowEx17_01 {
 	public static void main(String[] args) {
 		int num = 10;
 		
