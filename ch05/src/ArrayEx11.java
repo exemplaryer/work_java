@@ -4,7 +4,7 @@ class ArrayEx11 {
 		int[] counter = new int[10];
 
 		for (int i=0; i < numArr.length ; i++ ) {
-			numArr[i] = (int)(Math.random() * 10); // 0~9ÀÇ ÀÓÀÇÀÇ ¼ö¸¦ ¹è¿­¿¡ ÀúÀå
+			numArr[i] = (int)(Math.random() * 10); // 0~9ì˜ ìž„ì˜ì˜ ìˆ˜ë¥¼ ë°°ì—´ì— ì €ìž¥
 			System.out.print(numArr[i]);
 		}
 		System.out.println();
@@ -14,7 +14,7 @@ class ArrayEx11 {
 		}
 
 		for (int i=0; i < numArr.length ; i++ ) {
-			System.out.println( i +"ÀÇ °³¼ö :"+ counter[i]);
+			System.out.println( i +"ì˜ ê°œìˆ˜ :"+ counter[i]);
 		}
-	} // mainÀÇ ³¡
+	} // mainì˜ ë
 }

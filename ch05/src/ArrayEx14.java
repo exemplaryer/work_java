@@ -3,12 +3,12 @@ class ArrayEx14 {
 		String src = "ABCDE";
 
 		for(int i=0; i < src.length(); i++) {
-			char ch = src.charAt(i); // srcÀÇ i¹øÂ° ¹®ÀÚ¸¦ ch¿¡ ÀúÀå
+			char ch = src.charAt(i); // srcì˜ ië²ˆì§¸ ë¬¸ìžë¥¼ chì— ì €ìž¥
 			System.out.println("src.charAt("+i+"):"+ ch);
 		}
 
-		char[] chArr = src.toCharArray();  // StringÀ» char[]·Î º¯È¯
+		char[] chArr = src.toCharArray();  // Stringì„ char[]ë¡œ ë³€í™˜
 
-		System.out.println(chArr); // char¹è¿­(char[])À» Ãâ·Â
+		System.out.println(chArr); // charë°°ì—´(char[])ì„ ì¶œë ¥
 	}
 }

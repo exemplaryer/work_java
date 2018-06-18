@@ -9,20 +9,20 @@ class MultiArrEx2 {
 		int[][] bingo = new int[SIZE][SIZE];
 		Scanner scanner = new Scanner(System.in);
 
-		// ¹è¿­ÀÇ ¸ğµç ¿ä¼Ò¸¦ 1ºÎÅÍ SIZE*SIZE±îÁöÀÇ ¼ıÀÚ·Î ÃÊ±âÈ­
+		// ë°°ì—´ì˜ ëª¨ë“  ìš”ì†Œë¥¼ 1ë¶€í„° SIZE*SIZEê¹Œì§€ì˜ ìˆ«ìë¡œ ì´ˆê¸°í™”
 		for(int i=0;i<SIZE;i++) {
 			for(int j=0;j<SIZE;j++) {
 				bingo[i][j] = i*SIZE + j + 1;
 			}
 		}
 
-		// ¹è¿­¿¡ ÀúÀåµÈ °ªÀ» µÚ¼¯´Â´Ù.(shuffle)
+		// ë°°ì—´ì— ì €ì¥ëœ ê°’ì„ ë’¤ì„ëŠ”ë‹¤.(shuffle)
 		for(int i=0;i<SIZE;i++) {
 			for(int j=0;j<SIZE;j++) {
 				x = (int)(Math.random() * SIZE);
 				y = (int)(Math.random() * SIZE);
 
-				// bingo[i][j]¿Í ÀÓÀÇ·Î ¼±ÅÃµÈ °ª(bingo[x][y])À» ¹Ù²Û´Ù.
+				// bingo[i][j]ì™€ ì„ì˜ë¡œ ì„ íƒëœ ê°’(bingo[x][y])ì„ ë°”ê¾¼ë‹¤.
 				int tmp =  bingo[i][j];
 				bingo[i][j] = bingo[x][y];
 				bingo[x][y] = tmp;
@@ -37,20 +37,20 @@ class MultiArrEx2 {
 			}
 			System.out.println();
 		
-			System.out.printf("1~%dÀÇ ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.(Á¾·á:0)>", SIZE*SIZE);
-			String tmp = scanner.nextLine(); // È­¸é¿¡¼­ ÀÔ·Â¹ŞÀº ³»¿ëÀ» tmp¿¡ ÀúÀå
-			num = Integer.parseInt(tmp);     // ÀÔ·Â¹ŞÀº ¹®ÀÚ¿­(tmp)¸¦ ¼ıÀÚ·Î º¯È¯
+			System.out.printf("1~%dì˜ ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”.(ì¢…ë£Œ:0)>", SIZE*SIZE);
+			String tmp = scanner.nextLine(); // í™”ë©´ì—ì„œ ì…ë ¥ë°›ì€ ë‚´ìš©ì„ tmpì— ì €ì¥
+			num = Integer.parseInt(tmp);     // ì…ë ¥ë°›ì€ ë¬¸ìì—´(tmp)ë¥¼ ìˆ«ìë¡œ ë³€í™˜
 
-			// ÀÔ·Â¹ŞÀº ¼ıÀÚ¿Í °°Àº ¼ıÀÚ°¡ ÀúÀåµÈ ¿ä¼Ò¸¦ Ã£¾Æ¼­ 0À» ÀúÀå
+			// ì…ë ¥ë°›ì€ ìˆ«ìì™€ ê°™ì€ ìˆ«ìê°€ ì €ì¥ëœ ìš”ì†Œë¥¼ ì°¾ì•„ì„œ 0ì„ ì €ì¥
 			outer:
 			for(int i=0;i<SIZE;i++) {
 				for(int j=0;j<SIZE;j++) {
 					if(bingo[i][j]==num) {
 						bingo[i][j] = 0;
-						break outer; // 2Áß ¹İº¹¹®À» ¹ş¾î³­´Ù.
+						break outer; // 2ì¤‘ ë°˜ë³µë¬¸ì„ ë²—ì–´ë‚œë‹¤.
 					}
 				}
 			}
 		} while(num!=0); 
-	} // mainÀÇ ³¡
+	} // mainì˜ ë
 }

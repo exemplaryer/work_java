@@ -8,22 +8,22 @@ class ArrayEx10 {
 		System.out.println();
 
 		for (int i=0; i < numArr.length-1 ; i++ ) {
-			boolean changed = false;	// ÀÚ¸®¹Ù²ŞÀÌ ¹ß»ıÇß´ÂÁö¸¦ Ã¼Å©ÇÑ´Ù.
+			boolean changed = false;	// ìë¦¬ë°”ê¿ˆì´ ë°œìƒí–ˆëŠ”ì§€ë¥¼ ì²´í¬í•œë‹¤.
 
 			for (int j=0; j < numArr.length-1-i ;j++) {
-				if(numArr[j] > numArr[j+1]) { // ¿·ÀÇ °ªÀÌ ÀÛÀ¸¸é ¼­·Î ¹Ù²Û´Ù.
+				if(numArr[j] > numArr[j+1]) { // ì˜†ì˜ ê°’ì´ ì‘ìœ¼ë©´ ì„œë¡œ ë°”ê¾¼ë‹¤.
 					int temp = numArr[j];
 					numArr[j] = numArr[j+1];
 					numArr[j+1] = temp;
-					changed = true;	// ÀÚ¸®¹Ù²ŞÀÌ ¹ß»ıÇßÀ¸´Ï changed¸¦ true·Î.
+					changed = true;	// ìë¦¬ë°”ê¿ˆì´ ë°œìƒí–ˆìœ¼ë‹ˆ changedë¥¼ trueë¡œ.
 				}
 			} // end for j
 
-			if (!changed) break;	// ÀÚ¸®¹Ù²ŞÀÌ ¾øÀ¸¸é ¹İº¹¹®À» ¹ş¾î³­´Ù.
+			if (!changed) break;	// ìë¦¬ë°”ê¿ˆì´ ì—†ìœ¼ë©´ ë°˜ë³µë¬¸ì„ ë²—ì–´ë‚œë‹¤.
 
 			for(int k=0; k<numArr.length;k++)
-				System.out.print(numArr[k]); // Á¤·ÄµÈ °á°ú¸¦ Ãâ·ÂÇÑ´Ù.
+				System.out.print(numArr[k]); // ì •ë ¬ëœ ê²°ê³¼ë¥¼ ì¶œë ¥í•œë‹¤.
 			System.out.println();
 		} // end for i
-	} // mainÀÇ ³¡
+	} // mainì˜ ë
 }

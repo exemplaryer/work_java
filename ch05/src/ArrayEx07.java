@@ -3,13 +3,13 @@ class ArrayEx07 {
 		int[] numArr = new int[10];
 
 		for (int i=0; i < numArr.length ; i++ ) {
-             numArr[i] = i;  // ¹è¿­À» 0~9ÀÇ ¼ýÀÚ·Î ÃÊ±âÈ­ÇÑ´Ù.
+             numArr[i] = i;  // ë°°ì—´ì„ 0~9ì˜ ìˆ«ìžë¡œ ì´ˆê¸°í™”í•œë‹¤.
 			System.out.print(numArr[i]);  
 		}
 		System.out.println();
 
 		for (int i=0; i < 100; i++ ) {
-			int n = (int)(Math.random() * 10);	// 0~9ÁßÀÇ ÇÑ °ªÀ» ÀÓÀÇ·Î ¾ò´Â´Ù.
+			int n = (int)(Math.random() * 10);	// 0~9ì¤‘ì˜ í•œ ê°’ì„ ìž„ì˜ë¡œ ì–»ëŠ”ë‹¤.
 
 			int tmp = numArr[0];
 			numArr[0] = numArr[n];
@@ -18,5 +18,5 @@ class ArrayEx07 {
 
 		for (int i=0; i < numArr.length ; i++ )
 			System.out.print(numArr[i]);		
-	} // mainÀÇ ³¡
+	} // mainì˜ ë
 }

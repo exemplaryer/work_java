@@ -1,4 +1,4 @@
-import java.util.*;  // Arrays.toString()À» »ç¿ëÇÏ±â À§ÇØ Ãß°¡
+import java.util.*;  // Arrays.toString()ì„ ì‚¬ìš©í•˜ê¸° ìœ„í•´ ì¶”ê°€
 
 class ArrayEx02 {
 	public static void main(String[] args) {
@@ -9,14 +9,14 @@ class ArrayEx02 {
 		char[] chArr = {'a', 'b', 'c', 'd'};
 
 		for (int i=0; i < iArr1.length ; i++ ) {
-			iArr1[i] = i + 1; // 1~10ÀÇ ¼ıÀÚ¸¦ ¼ø¼­´ë·Î ¹è¿­¿¡ ³Ö´Â´Ù.
+			iArr1[i] = i + 1; // 1~10ì˜ ìˆ«ìë¥¼ ìˆœì„œëŒ€ë¡œ ë°°ì—´ì— ë„£ëŠ”ë‹¤.
 		}
 
 		for (int i=0; i < iArr2.length ; i++ ) {
-			iArr2[i] = (int)(Math.random()*10) + 1; // 1~10ÀÇ °ªÀ» ¹è¿­¿¡ ÀúÀå
+			iArr2[i] = (int)(Math.random()*10) + 1; // 1~10ì˜ ê°’ì„ ë°°ì—´ì— ì €ì¥
 		}
 
-		// ¹è¿­¿¡ ÀúÀåµÈ °ªµéÀ» Ãâ·ÂÇÑ´Ù.
+		// ë°°ì—´ì— ì €ì¥ëœ ê°’ë“¤ì„ ì¶œë ¥í•œë‹¤.
 		for(int i=0; i < iArr1.length;i++) {
 			System.out.print(iArr1[i]+",");	
 		}

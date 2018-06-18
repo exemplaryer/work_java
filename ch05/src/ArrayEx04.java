@@ -5,17 +5,17 @@ class ArrayEx04 {
 		System.out.println(abc);
 		System.out.println(num);
 
-		// ¹è¿­ abc¿Í numÀ» ºÙ¿©¼­ ÇÏ³ªÀÇ ¹è¿­(result)·Î ¸¸µç´Ù.
+		// ë°°ì—´ abcì™€ numì„ ë¶™ì—¬ì„œ í•˜ë‚˜ì˜ ë°°ì—´(result)ë¡œ ë§Œë“ ë‹¤.
 		char[] result = new char[abc.length+num.length];
 		System.arraycopy(abc, 0, result, 0, abc.length);
 		System.arraycopy(num, 0, result, abc.length, num.length);
 		System.out.println(result);
 
-		// ¹è¿­ abcÀ» ¹è¿­ numÀÇ Ã¹ ¹øÂ° À§Ä¡ºÎÅÍ ¹è¿­ abcÀÇ ±æÀÌ¸¸Å­ º¹»ç
+		// ë°°ì—´ abcì„ ë°°ì—´ numì˜ ì²« ë²ˆì§¸ ìœ„ì¹˜ë¶€í„° ë°°ì—´ abcì˜ ê¸¸ì´ë§Œí¼ ë³µì‚¬
 		System.arraycopy(abc, 0, num, 0, abc.length);	
 		System.out.println(num);
 
-	     // numberÀÇ ÀÎµ¦½º6 À§Ä¡¿¡ 3°³¸¦ º¹»ç
+	     // numberì˜ ì¸ë±ìŠ¤6 ìœ„ì¹˜ì— 3ê°œë¥¼ ë³µì‚¬
 		System.arraycopy(abc, 0, num, 6, 3);
 		System.out.println(num);
 	}

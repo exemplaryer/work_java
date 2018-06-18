@@ -2,8 +2,8 @@ class ArrayEx06 {
 	public static void main(String[] args) { 
 		int[] score = { 79, 88, 91, 33, 100, 55, 95}; 
 
-		int max = score[0]; // ¹è¿­ÀÇ Ã¹ ¹øÂ° °ªÀ¸·Î ÃÖ´ë°ªÀ» ÃÊ±âÈ­ ÇÑ´Ù. 
-		int min = score[0]; // ¹è¿­ÀÇ Ã¹ ¹øÂ° °ªÀ¸·Î ÃÖ¼Ò°ªÀ» ÃÊ±âÈ­ ÇÑ´Ù. 
+		int max = score[0]; // ë°°ì—´ì˜ ì²« ë²ˆì§¸ ê°’ìœ¼ë¡œ ìµœëŒ€ê°’ì„ ì´ˆê¸°í™” í•œë‹¤. 
+		int min = score[0]; // ë°°ì—´ì˜ ì²« ë²ˆì§¸ ê°’ìœ¼ë¡œ ìµœì†Œê°’ì„ ì´ˆê¸°í™” í•œë‹¤. 
 
 		for(int i=1; i < score.length;i++) {
 			if(score[i] > max) { 
@@ -13,7 +13,7 @@ class ArrayEx06 {
 			} 
 		} // end of for 
 
-		System.out.println("ÃÖ´ë°ª :" + max);       
-		System.out.println("ÃÖ¼Ò°ª :" + min);       
+		System.out.println("ìµœëŒ€ê°’ :" + max);       
+		System.out.println("ìµœì†Œê°’ :" + min);       
 	} // end of main 
 } // end of class 
