@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ch05Ex02_08 {
+public class Ch05Ex02_09 {
 	public static void main(String[] args) {
 		int[] numbers = new int[2];
 
@@ -23,21 +23,14 @@ public class Ch05Ex02_08 {
 			i++;
 		}
 		
-		int multiplesOfFive = 0;
-		int sum = 0;
+		System.out.println(i);
+		
 		for (int j = 0; j < numbers.length; j++) {
 			if (numbers[j] == 0) {
 				break;
 			}
 			
-			if (numbers[j] % 5 == 0) {
-				multiplesOfFive++;
-				sum += numbers[j];
-			}
+			System.out.print((numbers[j] % 2 != 0 ? numbers[j] * 2 : numbers[j] / 2) + " ");
 		}
-		
-		System.out.println("Multiples of 5 : " + multiplesOfFive);
-		System.out.println("sum : " + sum);
-		System.out.printf("avg : %.1f%n", sum / (double)multiplesOfFive);
 	}
 }
