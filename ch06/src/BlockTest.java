@@ -9,7 +9,7 @@ class BlockTest {
 	}
 
 	public BlockTest() {     
-		System.out.println("»ı¼ºÀÚ");
+		System.out.println("ìƒì„±ì");
 	}
 
 	public static void main(String args[]) {

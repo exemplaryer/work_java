@@ -1,21 +1,21 @@
 class Document {
 	static int count = 0;
-	String name;     // ¹®¼­¸í(Document name)
+	String name;     // ë¬¸ì„œëª…(Document name)
 
-	Document() {     // ¹®¼­ »ı¼º ½Ã ¹®¼­¸íÀ» ÁöÁ¤ÇÏÁö ¾Ê¾ÒÀ» ¶§
-		this("Á¦¸ñ¾øÀ½" + ++count);
+	Document() {     // ë¬¸ì„œ ìƒì„± ì‹œ ë¬¸ì„œëª…ì„ ì§€ì •í•˜ì§€ ì•Šì•˜ì„ ë•Œ
+		this("ì œëª©ì—†ìŒ" + ++count);
 	}
 
 	Document(String name) {
 		this.name = name;
-		System.out.println("¹®¼­ " + this.name + "°¡ »ı¼ºµÇ¾ú½À´Ï´Ù.");
+		System.out.println("ë¬¸ì„œ " + this.name + "ê°€ ìƒì„±ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	}
 }
 
 class DocumentTest {
 	public static void main(String args[]) {
 		Document d1 = new Document();
-		Document d2 = new Document("ÀÚ¹Ù.txt");
+		Document d2 = new Document("ìë°”.txt");
 		Document d3 = new Document();
 		Document d4 = new Document();
 	}

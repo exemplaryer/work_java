@@ -5,7 +5,7 @@ class Data1 {
 class Data2 {
 	int value;
 
-	Data2(int x) { 	// ¸Å°³º¯¼ö°¡ ÀÖ´Â »ı¼ºÀÚ.
+	Data2(int x) { 	// ë§¤ê°œë³€ìˆ˜ê°€ ìˆëŠ” ìƒì„±ì.
 		value = x;
 	}
 }
@@ -13,6 +13,6 @@ class Data2 {
 class ConstructorTest {
 	public static void main(String[] args) {
 		Data1 d1 = new Data1();
-		//Data2 d2 = new Data2();		// compile error¹ß»ı
+		//Data2 d2 = new Data2();		// compile errorë°œìƒ
 	}
 }

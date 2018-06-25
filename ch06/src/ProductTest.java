@@ -1,13 +1,13 @@
 class Product {
-	static int count = 0;   // »ı¼ºµÈ ÀÎ½ºÅÏ½ºÀÇ ¼ö¸¦ ÀúÀåÇÏ±â À§ÇÑ º¯¼ö
-	int serialNo;	        // ÀÎ½ºÅÏ½º °íÀ¯ÀÇ ¹øÈ£
+	static int count = 0;   // ìƒì„±ëœ ì¸ìŠ¤í„´ìŠ¤ì˜ ìˆ˜ë¥¼ ì €ì¥í•˜ê¸° ìœ„í•œ ë³€ìˆ˜
+	int serialNo;	        // ì¸ìŠ¤í„´ìŠ¤ ê³ ìœ ì˜ ë²ˆí˜¸
 
 	{
 		++count;
 		serialNo = count;
 	}
 
-	public Product() {}     // ±âº»»ı¼ºÀÚ, »ı·«°¡´É
+	public Product() {}     // ê¸°ë³¸ìƒì„±ì, ìƒëµê°€ëŠ¥
 }
 
 class ProductTest {
@@ -16,9 +16,9 @@ class ProductTest {
 		Product p2 = new Product();
 		Product p3 = new Product();
 
-		System.out.println("p1ÀÇ Á¦Ç°¹øÈ£(serial no)´Â " + p1.serialNo);
-		System.out.println("p2ÀÇ Á¦Ç°¹øÈ£(serial no)´Â " + p2.serialNo);
-		System.out.println("p3ÀÇ Á¦Ç°¹øÈ£(serial no)´Â " + p3.serialNo);
-		System.out.println("»ı»êµÈ Á¦Ç°ÀÇ ¼ö´Â ¸ğµÎ "+Product.count+"°³ ÀÔ´Ï´Ù.");  
+		System.out.println("p1ì˜ ì œí’ˆë²ˆí˜¸(serial no)ëŠ” " + p1.serialNo);
+		System.out.println("p2ì˜ ì œí’ˆë²ˆí˜¸(serial no)ëŠ” " + p2.serialNo);
+		System.out.println("p3ì˜ ì œí’ˆë²ˆí˜¸(serial no)ëŠ” " + p3.serialNo);
+		System.out.println("ìƒì‚°ëœ ì œí’ˆì˜ ìˆ˜ëŠ” ëª¨ë‘ "+Product.count+"ê°œ ì…ë‹ˆë‹¤.");  
 	}
 }

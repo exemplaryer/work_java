@@ -1,31 +1,31 @@
 class TvTest4 {
 	public static void main(String args[]) {
-		Tv[] tvArr = new Tv[3]; // ±æÀÌ°¡ 3ÀÎ Tv°´Ã¼ ¹è¿­
+		Tv[] tvArr = new Tv[3]; // ê¸¸ì´ê°€ 3ì¸ Tvê°ì²´ ë°°ì—´
 
-		// Tv°´Ã¼¸¦ »ı¼ºÇØ¼­ Tv°´Ã¼ ¹è¿­ÀÇ °¢ ¿ä¼Ò¿¡ ÀúÀå
+		// Tvê°ì²´ë¥¼ ìƒì„±í•´ì„œ Tvê°ì²´ ë°°ì—´ì˜ ê° ìš”ì†Œì— ì €ì¥
 		for(int i=0; i < tvArr.length;i++) {
 			tvArr[i] = new Tv();
-			tvArr[i].channel = i+10; // tvArr[i]ÀÇ channel¿¡ i+10À» ÀúÀå
+			tvArr[i].channel = i+10; // tvArr[i]ì˜ channelì— i+10ì„ ì €ì¥
 		}
 
 		for(int i=0; i < tvArr.length;i++) {
-			tvArr[i].channelUp();  // tvArr[i]ÀÇ ¸Ş¼­µå¸¦ È£Ãâ. Ã¤³ÎÀÌ 1Áõ°¡
+			tvArr[i].channelUp();  // tvArr[i]ì˜ ë©”ì„œë“œë¥¼ í˜¸ì¶œ. ì±„ë„ì´ 1ì¦ê°€
 			System.out.printf("tvArr[%d].channel=%d%n",i,tvArr[i].channel);
 		}
-	} // mainÀÇ ³¡
+	} // mainì˜ ë
 }
 
 
 /*
 class Tv { 
-     // TvÀÇ ¼Ó¼º(¸â¹öº¯¼ö) 
-     String color;           // »ö»ó 
-     boolean power;          // Àü¿ø»óÅÂ(on/off) 
-     int channel;          	 // Ã¤³Î 
+     // Tvì˜ ì†ì„±(ë©¤ë²„ë³€ìˆ˜) 
+     String color;           // ìƒ‰ìƒ 
+     boolean power;          // ì „ì›ìƒíƒœ(on/off) 
+     int channel;          	 // ì±„ë„ 
 
-     // TvÀÇ ±â´É(¸Ş¼­µå) 
-     void power()   { power = !power; }  // TV¸¦ ÄÑ°Å³ª ²ô´Â ±â´ÉÀ» ÇÏ´Â ¸Ş¼­µå 
-     void channelUp()   {  ++channel; }  // TVÀÇ Ã¤³ÎÀ» ³ôÀÌ´Â ±â´ÉÀ» ÇÏ´Â ¸Ş¼­µå 
-     void channelDown() {  --channel; }  // TVÀÇ Ã¤³ÎÀ» ³·Ãß´Â ±â´ÉÀ» ÇÏ´Â ¸Ş¼­µå  
+     // Tvì˜ ê¸°ëŠ¥(ë©”ì„œë“œ) 
+     void power()   { power = !power; }  // TVë¥¼ ì¼œê±°ë‚˜ ë„ëŠ” ê¸°ëŠ¥ì„ í•˜ëŠ” ë©”ì„œë“œ 
+     void channelUp()   {  ++channel; }  // TVì˜ ì±„ë„ì„ ë†’ì´ëŠ” ê¸°ëŠ¥ì„ í•˜ëŠ” ë©”ì„œë“œ 
+     void channelDown() {  --channel; }  // TVì˜ ì±„ë„ì„ ë‚®ì¶”ëŠ” ê¸°ëŠ¥ì„ í•˜ëŠ” ë©”ì„œë“œ  
 }
 */

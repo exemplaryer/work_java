@@ -1,7 +1,7 @@
 class ReferenceParamEx2 {
 	public static void main(String[] args) 
   {
-		int[] x = {10};  // Å©±â°¡ 1ÀÎ ¹è¿­. x[0] = 10;
+		int[] x = {10};  // í¬ê¸°ê°€ 1ì¸ ë°°ì—´. x[0] = 10;
 		System.out.println("main() : x = " + x[0]);
 
 		change(x);
@@ -9,7 +9,7 @@ class ReferenceParamEx2 {
 		System.out.println("main() : x = " + x[0]);
 	}
 
-	static void change(int[] x) { // ÂüÁ¶Çü ¸Å°³º¯¼ö
+	static void change(int[] x) { // ì°¸ì¡°í˜• ë§¤ê°œë³€ìˆ˜
 		x[0] = 1000;
 		System.out.println("change() : x = " + x[0]);
 	}

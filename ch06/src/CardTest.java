@@ -11,21 +11,21 @@ class CardTest{
 		c2.kind = "Spade";
 		c2.number = 4;
 
-		System.out.println("c1Àº " + c1.kind + ", " + c1.number + "ÀÌ¸ç, Å©±â´Â (" + c1.width + ", " + c1.height + ")" );
-		System.out.println("c2´Â " + c2.kind + ", " + c2.number + "ÀÌ¸ç, Å©±â´Â (" + c2.width + ", " + c2.height + ")" );		
+		System.out.println("c1ì€ " + c1.kind + ", " + c1.number + "ì´ë©°, í¬ê¸°ëŠ” (" + c1.width + ", " + c1.height + ")" );
+		System.out.println("c2ëŠ” " + c2.kind + ", " + c2.number + "ì´ë©°, í¬ê¸°ëŠ” (" + c2.width + ", " + c2.height + ")" );		
 
-		System.out.println("c1ÀÇ width¿Í height¸¦ °¢°¢ 50, 80À¸·Î º¯°æÇÕ´Ï´Ù.");
+		System.out.println("c1ì˜ widthì™€ heightë¥¼ ê°ê° 50, 80ìœ¼ë¡œ ë³€ê²½í•©ë‹ˆë‹¤.");
 		c1.width = 50;
 		c1.height = 80;
 
-		System.out.println("c1Àº " + c1.kind + ", " + c1.number + "ÀÌ¸ç, Å©±â´Â (" + c1.width + ", " + c1.height + ")" );
-		System.out.println("c2´Â " + c2.kind + ", " + c2.number + "ÀÌ¸ç, Å©±â´Â (" + c2.width + ", " + c2.height + ")" );
+		System.out.println("c1ì€ " + c1.kind + ", " + c1.number + "ì´ë©°, í¬ê¸°ëŠ” (" + c1.width + ", " + c1.height + ")" );
+		System.out.println("c2ëŠ” " + c2.kind + ", " + c2.number + "ì´ë©°, í¬ê¸°ëŠ” (" + c2.width + ", " + c2.height + ")" );
 	}
  }
 
 class Card {
-	String kind ;				// Ä«µåÀÇ ¹«´Ì - ÀÎ½ºÅÏ½º º¯¼ö
-	int number;				    // Ä«µåÀÇ ¼ıÀÚ - ÀÎ½ºÅÏ½º º¯¼ö
-	static int width = 100;		// Ä«µåÀÇ Æø  - Å¬·¡½º º¯¼ö
-	static int height = 250;	// Ä«µåÀÇ ³ôÀÌ - Å¬·¡½º º¯¼ö
+	String kind ;				// ì¹´ë“œì˜ ë¬´ëŠ¬ - ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜
+	int number;				    // ì¹´ë“œì˜ ìˆ«ì - ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜
+	static int width = 100;		// ì¹´ë“œì˜ í­  - í´ë˜ìŠ¤ ë³€ìˆ˜
+	static int height = 250;	// ì¹´ë“œì˜ ë†’ì´ - í´ë˜ìŠ¤ ë³€ìˆ˜
 }

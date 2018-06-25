@@ -11,7 +11,7 @@ class PrimitiveParamEx {
 		System.out.println("main() : x = " + d.x);
 	}
 
-	static void change(int x) {  // ±âº»Çü ¸Å°³º¯¼ö
+	static void change(int x) {  // ê¸°ë³¸í˜• ë§¤ê°œë³€ìˆ˜
 		x = 1000;
 		System.out.println("change() : x = " + x);
 	}

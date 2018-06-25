@@ -11,7 +11,7 @@ class FactorialTest {
 		if ( n == 1) {
 			result = 1;		
 		} else {
-			result = n * factorial(n-1);		// ´Ù½Ã ¸Ş¼­µå ÀÚ½ÅÀ» È£ÃâÇÑ´Ù.
+			result = n * factorial(n-1);		// ë‹¤ì‹œ ë©”ì„œë“œ ìì‹ ì„ í˜¸ì¶œí•œë‹¤.
 		}
 
 		return result;

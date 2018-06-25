@@ -1,6 +1,6 @@
 class FactorialTest2 {
 	static long factorial(int n) {
-		if(n<=0 || n>20) return -1;  // ¸Å°³º¯¼öÀÇ À¯È¿¼º °Ë»ç.
+		if(n<=0 || n>20) return -1;  // ë§¤ê°œë³€ìˆ˜ì˜ ìœ íš¨ì„± ê²€ì‚¬.
 		if(n<=1) 
 			 return 1;
 	    return n * factorial(n-1); 
@@ -14,11 +14,11 @@ class FactorialTest2 {
 			result = factorial(i);
 
 			if(result==-1) {
-				System.out.printf("À¯È¿ÇÏÁö ¾ÊÀº °ªÀÔ´Ï´Ù.(0<n<=20):%d%n", n);
+				System.out.printf("ìœ íš¨í•˜ì§€ ì•Šì€ ê°’ì…ë‹ˆë‹¤.(0<n<=20):%d%n", n);
 				break;
 			}
 
 			System.out.printf("%2d!=%20d%n", i, result);
 		}
-	} // mainÀÇ ³¡
+	} // mainì˜ ë
 }

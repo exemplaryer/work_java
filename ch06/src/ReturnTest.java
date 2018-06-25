@@ -5,8 +5,8 @@ class ReturnTest {
 		int result = r.add(3,5);
 		System.out.println(result);
 
-		int[] result2 = {0}; // ¹è¿­À» »ı¼ºÇÏ°í result2[0]ÀÇ °ªÀ» 0À¸·Î ÃÊ±âÈ­
-		r.add(3,5,result2);  // ¹è¿­À» add¸Ş¼­µåÀÇ ¸Å°³º¯¼ö·Î Àü´Ş
+		int[] result2 = {0}; // ë°°ì—´ì„ ìƒì„±í•˜ê³  result2[0]ì˜ ê°’ì„ 0ìœ¼ë¡œ ì´ˆê¸°í™”
+		r.add(3,5,result2);  // ë°°ì—´ì„ addë©”ì„œë“œì˜ ë§¤ê°œë³€ìˆ˜ë¡œ ì „ë‹¬
 		System.out.println(result2[0]);
 	}
 
@@ -15,6 +15,6 @@ class ReturnTest {
 	}
 
 	void add(int a, int b, int[] result) {
-		result[0] = a + b;  // ¸Å°³º¯¼ö·Î ³Ñ°Ü¹ŞÀº ¹è¿­¿¡ ¿¬»ê°á°ú¸¦ ÀúÀå
+		result[0] = a + b;  // ë§¤ê°œë³€ìˆ˜ë¡œ ë„˜ê²¨ë°›ì€ ë°°ì—´ì— ì—°ì‚°ê²°ê³¼ë¥¼ ì €ì¥
 	}
 }

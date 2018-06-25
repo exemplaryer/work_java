@@ -1,28 +1,28 @@
 class TvTest2 {
 	public static void main(String args[]) {
-		Tv t1 = new Tv();  // Tv2 t1; t1 = new Tv2();¸¦ ÇÑ ¹®ÀåÀ¸·Î °¡´É
+		Tv t1 = new Tv();  // Tv2 t1; t1 = new Tv2();ë¥¼ í•œ ë¬¸ì¥ìœ¼ë¡œ ê°€ëŠ¥
 		Tv t2 = new Tv();
-		System.out.println("t1ÀÇ channel°ªÀº " + t1.channel + "ÀÔ´Ï´Ù.");
-		System.out.println("t2ÀÇ channel°ªÀº " + t2.channel + "ÀÔ´Ï´Ù.");
+		System.out.println("t1ì˜ channelê°’ì€ " + t1.channel + "ì…ë‹ˆë‹¤.");
+		System.out.println("t2ì˜ channelê°’ì€ " + t2.channel + "ì…ë‹ˆë‹¤.");
 
-		t1.channel = 7;	// channel °ªÀ» 7À¸·Î ÇÑ´Ù.
-		System.out.println("t1ÀÇ channel°ªÀ» 7·Î º¯°æÇÏ¿´½À´Ï´Ù.");
+		t1.channel = 7;	// channel ê°’ì„ 7ìœ¼ë¡œ í•œë‹¤.
+		System.out.println("t1ì˜ channelê°’ì„ 7ë¡œ ë³€ê²½í•˜ì˜€ìŠµë‹ˆë‹¤.");
 
-		System.out.println("t1ÀÇ channel°ªÀº " + t1.channel + "ÀÔ´Ï´Ù.");
-		System.out.println("t2ÀÇ channel°ªÀº " + t2.channel + "ÀÔ´Ï´Ù.");
+		System.out.println("t1ì˜ channelê°’ì€ " + t1.channel + "ì…ë‹ˆë‹¤.");
+		System.out.println("t2ì˜ channelê°’ì€ " + t2.channel + "ì…ë‹ˆë‹¤.");
 	}
 }
 
 /*
 class Tv { 
-    // TvÀÇ ¼Ó¼º(¸â¹öº¯¼ö) 
-    String color;          // »ö»ó 
-    boolean power;         // Àü¿ø»óÅÂ(on/off) 
-    int channel;           // Ã¤³Î 
+    // Tvì˜ ì†ì„±(ë©¤ë²„ë³€ìˆ˜) 
+    String color;          // ìƒ‰ìƒ 
+    boolean power;         // ì „ì›ìƒíƒœ(on/off) 
+    int channel;           // ì±„ë„ 
 
-    // TvÀÇ ±â´É(¸Ş¼­µå) 
-    void power()   { power = !power; }  // TV¸¦ ÄÑ°Å³ª ²ô´Â ±â´ÉÀ» ÇÏ´Â ¸Ş¼­µå 
-    void channelUp()   {  ++channel; }  // TVÀÇ Ã¤³ÎÀ» ³ôÀÌ´Â ±â´ÉÀ» ÇÏ´Â ¸Ş¼­µå 
-    void channelDown() {  --channel; }  // TVÀÇ Ã¤³ÎÀ» ³·Ãß´Â ±â´ÉÀ» ÇÏ´Â ¸Ş¼­µå 
+    // Tvì˜ ê¸°ëŠ¥(ë©”ì„œë“œ) 
+    void power()   { power = !power; }  // TVë¥¼ ì¼œê±°ë‚˜ ë„ëŠ” ê¸°ëŠ¥ì„ í•˜ëŠ” ë©”ì„œë“œ 
+    void channelUp()   {  ++channel; }  // TVì˜ ì±„ë„ì„ ë†’ì´ëŠ” ê¸°ëŠ¥ì„ í•˜ëŠ” ë©”ì„œë“œ 
+    void channelDown() {  --channel; }  // TVì˜ ì±„ë„ì„ ë‚®ì¶”ëŠ” ê¸°ëŠ¥ì„ í•˜ëŠ” ë©”ì„œë“œ 
 }
 */
