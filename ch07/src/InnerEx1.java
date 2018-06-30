@@ -1,20 +1,20 @@
 class InnerEx1 { 
       class InstanceInner { 
             int iv = 100; 
-//          static int cv = 100;            // ¿¡·¯! staticº¯¼ö¸¦ ¼±¾ğÇÒ ¼ö ¾ø´Ù. 
-            final static int CONST = 100;   // final staticÀº »ó¼öÀÌ¹Ç·Î Çã¿ëÇÑ´Ù. 
+//          static int cv = 100;            // ì—ëŸ¬! staticë³€ìˆ˜ë¥¼ ì„ ì–¸í•  ìˆ˜ ì—†ë‹¤. 
+            final static int CONST = 100;   // final staticì€ ìƒìˆ˜ì´ë¯€ë¡œ í—ˆìš©í•œë‹¤. 
       } 
 
       static class StaticInner { 
             int iv = 200; 
-            static int cv = 200;       // staticÅ¬·¡½º¸¸ static¸â¹ö¸¦ Á¤ÀÇÇÒ ¼ö ÀÖ´Ù. 
+            static int cv = 200;       // staticí´ë˜ìŠ¤ë§Œ staticë©¤ë²„ë¥¼ ì •ì˜í•  ìˆ˜ ìˆë‹¤. 
       } 
 
       void myMethod() { 
             class LocalInner { 
                   int iv = 300; 
-//                static int cv = 300;          // ¿¡·¯! staticº¯¼ö¸¦ ¼±¾ğÇÒ ¼ö ¾ø´Ù. 
-                  final static int CONST = 300; // final staticÀº »ó¼öÀÌ¹Ç·Î Çã¿ë 
+//                static int cv = 300;          // ì—ëŸ¬! staticë³€ìˆ˜ë¥¼ ì„ ì–¸í•  ìˆ˜ ì—†ë‹¤. 
+                  final static int CONST = 300; // final staticì€ ìƒìˆ˜ì´ë¯€ë¡œ í—ˆìš© 
             } 
       } 
 

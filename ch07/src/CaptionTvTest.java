@@ -1,6 +1,6 @@
 class Tv {
-	boolean power; 	// Àü¿ø»óÅÂ(on/off)
-	int channel;	// Ã¤³Î
+	boolean power; 	// ì „ì›ìƒíƒœ(on/off)
+	int channel;	// ì±„ë„
 
 	void power()        {   power = !power; }
 	void channelUp()    { 	 ++channel;     }
@@ -8,9 +8,9 @@ class Tv {
 }
 
 class CaptionTv extends Tv {
-	boolean caption;		// Ä¸¼Ç»óÅÂ(on/off)
+	boolean caption;		// ìº¡ì…˜ìƒíƒœ(on/off)
 	void displayCaption(String text) {
-		if (caption) {	// Ä¸¼Ç »óÅÂ°¡ on(true)ÀÏ ¶§¸¸ text¸¦ º¸¿© ÁØ´Ù.
+		if (caption) {	// ìº¡ì…˜ ìƒíƒœê°€ on(true)ì¼ ë•Œë§Œ textë¥¼ ë³´ì—¬ ì¤€ë‹¤.
 			System.out.println(text);
 		}
 	}
@@ -19,11 +19,11 @@ class CaptionTv extends Tv {
 class CaptionTvTest {
 	public static void main(String args[]) {
 		CaptionTv ctv = new CaptionTv();
-		ctv.channel = 10;				// Á¶»ó Å¬·¡½º·ÎºÎÅÍ »ó¼Ó¹ŞÀº ¸â¹ö
-		ctv.channelUp();				// Á¶»ó Å¬·¡½º·ÎºÎÅÍ »ó¼Ó¹ŞÀº ¸â¹ö
+		ctv.channel = 10;				// ì¡°ìƒ í´ë˜ìŠ¤ë¡œë¶€í„° ìƒì†ë°›ì€ ë©¤ë²„
+		ctv.channelUp();				// ì¡°ìƒ í´ë˜ìŠ¤ë¡œë¶€í„° ìƒì†ë°›ì€ ë©¤ë²„
 		System.out.println(ctv.channel);
 		ctv.displayCaption("Hello, World");	
-		ctv.caption = true;				    // Ä¸¼Ç±â´ÉÀ» ÄÒ´Ù.
-		ctv.displayCaption("Hello, World");	// Ä¸¼ÇÀ» È­¸é¿¡ º¸¿© ÁØ´Ù.
+		ctv.caption = true;				    // ìº¡ì…˜ê¸°ëŠ¥ì„ ì¼ ë‹¤.
+		ctv.displayCaption("Hello, World");	// ìº¡ì…˜ì„ í™”ë©´ì— ë³´ì—¬ ì¤€ë‹¤.
 	}
 }

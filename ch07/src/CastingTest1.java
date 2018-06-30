@@ -5,9 +5,9 @@ class CastingTest1 {
 		FireEngine fe2 = null;
 
 		fe.water();
-		car = fe;    // car =(Car)fe;¿¡¼­ Çüº¯È¯ÀÌ »ı·«µÈ ÇüÅÂ´Ù.
+		car = fe;    // car =(Car)fe;ì—ì„œ í˜•ë³€í™˜ì´ ìƒëµëœ í˜•íƒœë‹¤.
 //		car.water();	
-		fe2 = (FireEngine)car; // ÀÚ¼ÕÅ¸ÀÔ ¡ç Á¶»óÅ¸ÀÔ
+		fe2 = (FireEngine)car; // ìì†íƒ€ì… â† ì¡°ìƒíƒ€ì…
 		fe2.water();
 	}
 }
@@ -16,17 +16,17 @@ class Car {
 	String color;
 	int door;
 
-	void drive() { 		// ¿îÀüÇÏ´Â ±â´É
+	void drive() { 		// ìš´ì „í•˜ëŠ” ê¸°ëŠ¥
 		System.out.println("drive, Brrrr~");
 	}
 
-	void stop() {		// ¸ØÃß´Â ±â´É	
+	void stop() {		// ë©ˆì¶”ëŠ” ê¸°ëŠ¥	
 		System.out.println("stop!!!");	
 	}
 }
 
-class FireEngine extends Car {	// ¼Ò¹æÂ÷
-	void water() {		// ¹°À» »Ñ¸®´Â ±â´É
+class FireEngine extends Car {	// ì†Œë°©ì°¨
+	void water() {		// ë¬¼ì„ ë¿Œë¦¬ëŠ” ê¸°ëŠ¥
 		System.out.println("water!!!");
 	}
 }

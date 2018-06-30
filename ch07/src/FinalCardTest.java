@@ -1,6 +1,6 @@
 class Card2 {
-	final int NUMBER;		// »ó¼öÁö¸¸ ¼±¾ğ°ú ÇÔ²² ÃÊ±âÈ­ ÇÏÁö ¾Ê°í
-	final String KIND;		// »ı¼ºÀÚ¿¡¼­ ´Ü ÇÑ¹ø¸¸ ÃÊ±âÈ­ÇÒ ¼ö ÀÖ´Ù.
+	final int NUMBER;		// ìƒìˆ˜ì§€ë§Œ ì„ ì–¸ê³¼ í•¨ê»˜ ì´ˆê¸°í™” í•˜ì§€ ì•Šê³ 
+	final String KIND;		// ìƒì„±ìì—ì„œ ë‹¨ í•œë²ˆë§Œ ì´ˆê¸°í™”í•  ìˆ˜ ìˆë‹¤.
 	static int width  = 100;	
 	static int height = 250;
 

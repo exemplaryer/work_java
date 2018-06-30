@@ -4,8 +4,8 @@ public class TimeTest {
             Time t = new Time(12, 35, 30); 
             System.out.println(t); 
 //          t.hour = 13;
-            t.setHour(t.getHour()+1);   // ÇöÀç½Ã°£º¸´Ù 1½Ã°£ ÈÄ·Î º¯°æÇÑ´Ù. 
-            System.out.println(t);      // System.out.println(t.toString());°ú °°´Ù.
+            t.setHour(t.getHour()+1);   // í˜„ìž¬ì‹œê°„ë³´ë‹¤ 1ì‹œê°„ í›„ë¡œ ë³€ê²½í•œë‹¤. 
+            System.out.println(t);      // System.out.println(t.toString());ê³¼ ê°™ë‹¤.
       } 
 }
 

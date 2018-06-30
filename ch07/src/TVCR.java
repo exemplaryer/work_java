@@ -1,6 +1,6 @@
 class Tv2 {
-	boolean power; 	// Àü¿ø»óÅÂ(on/off)
-	int channel;		// Ã¤³Î
+	boolean power; 	// ì „ì›ìƒíƒœ(on/off)
+	int channel;		// ì±„ë„
 
 	void power()       { 	power = !power; }
 	void channelUp()   { 	++channel; 		}
@@ -8,13 +8,13 @@ class Tv2 {
 }
 
 class VCR {
-	boolean power; 	// Àü¿ø»óÅÂ(on/off)
+	boolean power; 	// ì „ì›ìƒíƒœ(on/off)
    int counter = 0;
 	void power() { 	power = !power; }
-	void play()  { /* ³»¿ë»ı·«*/ }
-	void stop()  { /* ³»¿ë»ı·«*/ }
-	void rew()   { /* ³»¿ë»ı·«*/ }
-	void ff()    { /* ³»¿ë»ı·«*/ }
+	void play()  { /* ë‚´ìš©ìƒëµ*/ }
+	void stop()  { /* ë‚´ìš©ìƒëµ*/ }
+	void rew()   { /* ë‚´ìš©ìƒëµ*/ }
+	void ff()    { /* ë‚´ìš©ìƒëµ*/ }
 }
 
 class TVCR extends Tv2 {

@@ -5,7 +5,7 @@ class CastingTest2 {
 		FireEngine fe = null;
   
 		car.drive();
-		fe = (FireEngine)car;		// 8¹øÂ° ÁÙ. ÄÄÆÄÀÏÀº OK. ½ÇÇà ½Ã ¿¡·¯°¡ ¹ß»ı
+		fe = (FireEngine)car;		// 8ë²ˆì§¸ ì¤„. ì»´íŒŒì¼ì€ OK. ì‹¤í–‰ ì‹œ ì—ëŸ¬ê°€ ë°œìƒ
 		fe.drive();
 		car2 = fe;
 		car2.drive();

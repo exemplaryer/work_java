@@ -28,7 +28,7 @@ class Point3D extends Point2 {
 		this.z = z;
 	}
 
-	String getLocation() {	// ¿À¹ö¶óÀÌµù
+	String getLocation() {	// ì˜¤ë²„ë¼ì´ë”©
 		return "x :" + x + ", y :"+ y + ", z :" + z;
 	}	
 }

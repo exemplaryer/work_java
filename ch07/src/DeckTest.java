@@ -1,21 +1,21 @@
 class DeckTest {
 	public static void main(String args[]) {
-		Deck d = new Deck();	// Ä«µå ÇÑ ¹ú(Deck)À» ¸¸µç´Ù.
-		Card c = d.pick(0);	   	// ¼¯±â Àü¿¡ Á¦ÀÏ À§ÀÇ Ä«µå¸¦ »Ì´Â´Ù.
-		System.out.println(c); 	// System.out.println(c.toString());°ú °°´Ù.
+		Deck d = new Deck();	// ì¹´ë“œ í•œ ë²Œ(Deck)ì„ ë§Œë“ ë‹¤.
+		Card c = d.pick(0);	   	// ì„ê¸° ì „ì— ì œì¼ ìœ„ì˜ ì¹´ë“œë¥¼ ë½‘ëŠ”ë‹¤.
+		System.out.println(c); 	// System.out.println(c.toString());ê³¼ ê°™ë‹¤.
 
-		d.shuffle();			// Ä«µå¸¦ ¼¯´Â´Ù.
-		c = d.pick(0);		   	// ¼¯Àº ÈÄ¿¡ Á¦ÀÏ À§ÀÇ Ä«µå¸¦ »Ì´Â´Ù.
+		d.shuffle();			// ì¹´ë“œë¥¼ ì„ëŠ”ë‹¤.
+		c = d.pick(0);		   	// ì„ì€ í›„ì— ì œì¼ ìœ„ì˜ ì¹´ë“œë¥¼ ë½‘ëŠ”ë‹¤.
 		System.out.println(c);
 	}
 }
 
-// DeckÅ¬·¡½º
+// Deckí´ë˜ìŠ¤
 class Deck {
-	final int CARD_NUM = 52;	// Ä«µåÀÇ °³¼ö
-	Card cardArr[] = new Card[CARD_NUM];  // Card°´Ã¼ ¹è¿­À» Æ÷ÇÔ
+	final int CARD_NUM = 52;	// ì¹´ë“œì˜ ê°œìˆ˜
+	Card cardArr[] = new Card[CARD_NUM];  // Cardê°ì²´ ë°°ì—´ì„ í¬í•¨
 
-	Deck () {	// DeckÀÇ Ä«µå¸¦ ÃÊ±âÈ­ÇÑ´Ù.
+	Deck () {	// Deckì˜ ì¹´ë“œë¥¼ ì´ˆê¸°í™”í•œë‹¤.
 		int i=0;
 
 		for(int k=Card.KIND_MAX; k > 0; k--)
@@ -23,16 +23,16 @@ class Deck {
 				cardArr[i++] = new Card(k, n+1);
 	}
 
-	Card pick(int index) {	// ÁöÁ¤µÈ À§Ä¡(index)¿¡ ÀÖ´Â Ä«µå ÇÏ³ª¸¦ ²¨³»¼­ ¹İÈ¯
+	Card pick(int index) {	// ì§€ì •ëœ ìœ„ì¹˜(index)ì— ìˆëŠ” ì¹´ë“œ í•˜ë‚˜ë¥¼ êº¼ë‚´ì„œ ë°˜í™˜
 		return cardArr[index];
 	}
 
-	Card pick() {			// Deck¿¡¼­ Ä«µå ÇÏ³ª¸¦ ¼±ÅÃÇÑ´Ù.
+	Card pick() {			// Deckì—ì„œ ì¹´ë“œ í•˜ë‚˜ë¥¼ ì„ íƒí•œë‹¤.
 		int index = (int)(Math.random() * CARD_NUM);
 		return pick(index);
 	}
 
-	void shuffle() { // Ä«µåÀÇ ¼ø¼­¸¦ ¼¯´Â´Ù.
+	void shuffle() { // ì¹´ë“œì˜ ìˆœì„œë¥¼ ì„ëŠ”ë‹¤.
 		for(int i=0; i < cardArr.length; i++) {
 			int r = (int)(Math.random() * CARD_NUM);
 
@@ -41,12 +41,12 @@ class Deck {
 			cardArr[r] = temp;
 		}
 	}
-} // DeckÅ¬·¡½ºÀÇ ³¡
+} // Deckí´ë˜ìŠ¤ì˜ ë
 
-// CardÅ¬·¡½º
+// Cardí´ë˜ìŠ¤
 class Card {
-	static final int KIND_MAX = 4;	// Ä«µå ¹«´ÌÀÇ ¼ö
-	static final int NUM_MAX  = 13;	// ¹«´Ìº° Ä«µå ¼ö
+	static final int KIND_MAX = 4;	// ì¹´ë“œ ë¬´ëŠ¬ì˜ ìˆ˜
+	static final int NUM_MAX  = 13;	// ë¬´ëŠ¬ë³„ ì¹´ë“œ ìˆ˜
 
 	static final int SPADE   = 4;
 	static final int DIAMOND = 3;
@@ -67,9 +67,9 @@ class Card {
 
 	public String toString() {
 		String[] kinds = {"", "CLOVER", "HEART", "DIAMOND", "SPADE"};
-		String numbers = "0123456789XJQK"; // ¼ıÀÚ 10Àº X·Î Ç¥Çö
+		String numbers = "0123456789XJQK"; // ìˆ«ì 10ì€ Xë¡œ í‘œí˜„
 
 		return "kind : " + kinds[this.kind] 
 			+ ", number : " + numbers.charAt(this.number);
-	} // toString()ÀÇ ³¡
-} // CardÅ¬·¡½ºÀÇ ³¡
+	} // toString()ì˜ ë
+} // Cardí´ë˜ìŠ¤ì˜ ë

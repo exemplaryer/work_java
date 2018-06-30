@@ -3,32 +3,32 @@ class FighterTest {
 		Fighter f = new Fighter();
 
 		if (f instanceof Unit)	{		
-			System.out.println("f´Â UnitÅ¬·¡½ºÀÇ ÀÚ¼ÕÀÔ´Ï´Ù.");
+			System.out.println("fëŠ” Unití´ë˜ìŠ¤ì˜ ìì†ì…ë‹ˆë‹¤.");
 		}
 		if (f instanceof Fightable) {	
-			System.out.println("f´Â FightableÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇß½À´Ï´Ù.");
+			System.out.println("fëŠ” Fightableì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í–ˆìŠµë‹ˆë‹¤.");
 		}
 		if (f instanceof Movable) {		
-			System.out.println("f´Â MovableÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇß½À´Ï´Ù.");
+			System.out.println("fëŠ” Movableì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í–ˆìŠµë‹ˆë‹¤.");
 		}
 		if (f instanceof Attackable) {	
-			System.out.println("f´Â AttackableÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇß½À´Ï´Ù.");
+			System.out.println("fëŠ” Attackableì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í–ˆìŠµë‹ˆë‹¤.");
 		}
 		if (f instanceof Object) {		
-			System.out.println("f´Â ObjectÅ¬·¡½ºÀÇ ÀÚ¼ÕÀÔ´Ï´Ù.");
+			System.out.println("fëŠ” Objectí´ë˜ìŠ¤ì˜ ìì†ì…ë‹ˆë‹¤.");
 		}
 	}
 }
 
 class Fighter extends Unit implements Fightable {
-	public void move(int x, int y) { /* ³»¿ë »ı·« */ }
-	public void attack(Unit u) { /* ³»¿ë »ı·« */ }
+	public void move(int x, int y) { /* ë‚´ìš© ìƒëµ */ }
+	public void attack(Unit u) { /* ë‚´ìš© ìƒëµ */ }
 }
 
 class Unit {
-	int currentHP;	// À¯´ÖÀÇ Ã¼·Â
-	int x;			// À¯´ÖÀÇ À§Ä¡(xÁÂÇ¥)
-	int y;			// À¯´ÖÀÇ À§Ä¡(yÁÂÇ¥)
+	int currentHP;	// ìœ ë‹›ì˜ ì²´ë ¥
+	int x;			// ìœ ë‹›ì˜ ìœ„ì¹˜(xì¢Œí‘œ)
+	int y;			// ìœ ë‹›ì˜ ìœ„ì¹˜(yì¢Œí‘œ)
 }
 
 interface Fightable extends Movable, Attackable { }

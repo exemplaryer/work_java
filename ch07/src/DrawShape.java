@@ -8,8 +8,8 @@ class DrawShape {
 		Triangle t = new Triangle(p);
 		Circle   c = new Circle(new Point(150, 150), 50);
 
-		t.draw(); // »ï°¢ÇüÀ» ±×¸°´Ù.
-		c.draw(); // ¿øÀ» ±×¸°´Ù.
+		t.draw(); // ì‚¼ê°í˜•ì„ ê·¸ë¦°ë‹¤.
+		c.draw(); // ì›ì„ ê·¸ë¦°ë‹¤.
 	}
 }
 
@@ -34,16 +34,16 @@ class Point {
 	}
 
 	String getXY() {  
-		return "("+x+","+y+")"; // x¿Í yÀÇ °ªÀ» ¹®ÀÚ¿­·Î ¹İÈ¯
+		return "("+x+","+y+")"; // xì™€ yì˜ ê°’ì„ ë¬¸ìì—´ë¡œ ë°˜í™˜
 	}
 }
 
 class Circle extends Shape {
-	Point center;	// ¿øÀÇ ¿øÁ¡ÁÂÇ¥
-	int r;			// ¹İÁö¸§
+	Point center;	// ì›ì˜ ì›ì ì¢Œí‘œ
+	int r;			// ë°˜ì§€ë¦„
 
 	Circle() {		
-		this(new Point(0, 0), 100); // Circle(Point center, int r)¸¦ È£Ãâ
+		this(new Point(0, 0), 100); // Circle(Point center, int r)ë¥¼ í˜¸ì¶œ
 	}
 
 	Circle(Point center, int r) {
@@ -51,7 +51,7 @@ class Circle extends Shape {
 		this.r = r;
 	}
 
-	void draw() { // ¿øÀ» ±×¸®´Â ´ë½Å¿¡ ¿øÀÇ Á¤º¸¸¦ Ãâ·ÂÇÏµµ·Ï Çß´Ù.
+	void draw() { // ì›ì„ ê·¸ë¦¬ëŠ” ëŒ€ì‹ ì— ì›ì˜ ì •ë³´ë¥¼ ì¶œë ¥í•˜ë„ë¡ í–ˆë‹¤.
 		System.out.printf("[center=(%d, %d), r=%d, color=%s]%n", center.x, center.y, r, color);
 	}
 }

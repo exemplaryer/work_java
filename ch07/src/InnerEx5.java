@@ -10,8 +10,8 @@ class Outer2 {
 			System.out.println("       this.value :" + this.value);
 			System.out.println("Outer2.this.value :" + Outer2.this.value);
 		}
-	} // InnerÅ¬·¡½ºÀÇ ³¡
-} // OuterÅ¬·¡½ºÀÇ ³¡
+	} // Innerí´ë˜ìŠ¤ì˜ ë
+} // Outerí´ë˜ìŠ¤ì˜ ë
 
 class InnerEx5 {
 	public static void main(String args[]) {
@@ -19,4 +19,4 @@ class InnerEx5 {
 		Outer2.Inner inner = outer.new Inner();
 		inner.method1();
 	}
-} // InnerEx5 ³¡
+} // InnerEx5 ë

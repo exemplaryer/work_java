@@ -1,10 +1,10 @@
 interface Parseable {
-	// ±¸¹® ºĞ¼®ÀÛ¾÷À» ¼öÇàÇÑ´Ù.
+	// êµ¬ë¬¸ ë¶„ì„ì‘ì—…ì„ ìˆ˜í–‰í•œë‹¤.
 	public abstract void parse(String fileName);
 }
 
 class ParserManager {
-	// ¸®ÅÏÅ¸ÀÔÀÌ ParseableÀÎÅÍÆäÀÌ½ºÀÌ´Ù.
+	// ë¦¬í„´íƒ€ì…ì´ Parseableì¸í„°í˜ì´ìŠ¤ì´ë‹¤.
 	public static Parseable getParser(String type) {
 		if(type.equals("XML")) {
 			return new XMLParser();
@@ -18,14 +18,14 @@ class ParserManager {
 
 class XMLParser implements Parseable {
 	public void parse(String fileName) {
-		/* ±¸¹® ºĞ¼®ÀÛ¾÷À» ¼öÇàÇÏ´Â ÄÚµå¸¦ Àû´Â´Ù. */
+		/* êµ¬ë¬¸ ë¶„ì„ì‘ì—…ì„ ìˆ˜í–‰í•˜ëŠ” ì½”ë“œë¥¼ ì ëŠ”ë‹¤. */
 		System.out.println(fileName + "- XML parsing completed.");
 	}
 }
 
 class HTMLParser implements Parseable {
 	public void parse(String fileName) {
-		/* ±¸¹® ºĞ¼®ÀÛ¾÷À» ¼öÇàÇÏ´Â ÄÚµå¸¦ Àû´Â´Ù. */
+		/* êµ¬ë¬¸ ë¶„ì„ì‘ì—…ì„ ìˆ˜í–‰í•˜ëŠ” ì½”ë“œë¥¼ ì ëŠ”ë‹¤. */
 		System.out.println(fileName + "-HTML parsing completed.");
 	}
 }

@@ -16,15 +16,15 @@ class Outer {
 
 class InnerEx4 {
 	public static void main(String[] args) {
-		// ÀÎ½ºÅÏ½ºÅ¬·¡½ºÀÇ ÀÎ½ºÅÏ½º¸¦ »ı¼ºÇÏ·Á¸é
-		// ¿ÜºÎ Å¬·¡½ºÀÇ ÀÎ½ºÅÏ½º¸¦ ¸ÕÀú »ı¼ºÇØ¾ß ÇÑ´Ù.
+		// ì¸ìŠ¤í„´ìŠ¤í´ë˜ìŠ¤ì˜ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±í•˜ë ¤ë©´
+		// ì™¸ë¶€ í´ë˜ìŠ¤ì˜ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ë¨¼ì € ìƒì„±í•´ì•¼ í•œë‹¤.
 		Outer oc = new Outer();
 		Outer.InstanceInner ii = oc.new InstanceInner();
 
 		System.out.println("ii.iv : "+ ii.iv);
 		System.out.println("Outer.StaticInner.cv : " + Outer.StaticInner.cv);
 
-	     // ½ºÅÂÆ½ ³»ºÎ Å¬·¡½ºÀÇ ÀÎ½ºÅÏ½º´Â ¿ÜºÎ Å¬·¡½º¸¦ ¸ÕÀú »ı¼ºÇÏÁö ¾Ê¾Æµµ µÈ´Ù.
+	     // ìŠ¤íƒœí‹± ë‚´ë¶€ í´ë˜ìŠ¤ì˜ ì¸ìŠ¤í„´ìŠ¤ëŠ” ì™¸ë¶€ í´ë˜ìŠ¤ë¥¼ ë¨¼ì € ìƒì„±í•˜ì§€ ì•Šì•„ë„ ëœë‹¤.
 		Outer.StaticInner si = new Outer.StaticInner();
 		System.out.println("si.iv : "+ si.iv);
 	}

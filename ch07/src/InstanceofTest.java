@@ -14,7 +14,7 @@ class InstanceofTest {
 			System.out.println("This is an Object instance.");
 		} 
 
-		System.out.println(fe.getClass().getName()); // Å¬·¡½ºÀÇ ÀÌ¸§À» Ãâ·Â
+		System.out.println(fe.getClass().getName()); // í´ë˜ìŠ¤ì˜ ì´ë¦„ì„ ì¶œë ¥
 	}
 } // class
 class Car2 {}
