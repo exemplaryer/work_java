@@ -1,9 +1,9 @@
-package ch02;
+ï»¿package ch02;
 
 public class CastingEx1 {
 	public static void main(String[] args) {
 		double d = 85.4;
-		int score = (int)d;	// double¿¡¼­ int·Î ¸í½ÃÀû Çüº¯È¯ÀÌ ÀÏ¾î³².
+		int score = (int)d;	// doubleì—ì„œ intë¡œ ëª…ì‹œì  í˜•ë³€í™˜ì´ ì¼ì–´ë‚¨.
 		
 		System.out.println("score=" + score);
 		System.out.println("d=" + d);
