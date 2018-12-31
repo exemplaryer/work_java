@@ -22,6 +22,8 @@ public class Ch02Ex02_08 {
 		// 4. printf() 이용하여 실수 2개와 문자 출력
 		System.out.printf("%.2f%n", num1);
 		System.out.printf("%.2f%n", num2);
-		System.out.printf("%s", strChar);
+		
+		char firstChar = strChar.charAt(0);
+		System.out.printf("%s", firstChar);
 	}
 }
